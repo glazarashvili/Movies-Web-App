@@ -3,6 +3,7 @@
   transition: 0.6s ease-in;
   margin-top: 100px;
   cursor: pointer;
+  display: inline-block;
 }
 
 .movie-item:hover .background {

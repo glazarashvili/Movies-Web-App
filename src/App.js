@@ -1,8 +1,8 @@
 import Header from './components/Header/Header'
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import MainLayout from './components/MainLayout/MainLayout'
-import MovieItem from './components/Movies/Movie'
+import MovieItem from './components/Movies/MovieItem'
 
 function App() {
   // React.useEffect(() => {

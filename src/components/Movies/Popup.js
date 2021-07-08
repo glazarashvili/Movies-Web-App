@@ -9,7 +9,6 @@ const Popup = () => {
         <h1 className={classes.title}>French Exit</h1>
         <p>1.56</p>
       </div>
-
       <p>
         <span>Release Date:</span> 2012
       </p>

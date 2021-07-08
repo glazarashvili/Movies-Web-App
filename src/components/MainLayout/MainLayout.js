@@ -37,7 +37,6 @@ const MainLayout = () => {
           height: '100%',
           objectFit: 'cover',
           width: '100%',
-          backgroundImage: posters[posterIndex].url,
         }}
         src={posters[posterIndex].url}
       />

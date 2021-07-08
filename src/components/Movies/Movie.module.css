@@ -29,29 +29,3 @@
   top: calc(50% - 33px);
   left: calc(50% - 33px);
 }
-
-.popup {
-  position: absolute;
-  padding: 20px;
-  width: 300px;
-  height: 270px;
-  left: 200px;
-  bottom: 100;
-  top: 0;
-  left: 200;
-  background: #fff;
-  border-radius: 5px;
-}
-
-.title {
-  font-size: 18px;
-  color: rgba(0, 135, 255, 1);
-}
-
-.heading {
-  padding-bottom: 3px solid black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}

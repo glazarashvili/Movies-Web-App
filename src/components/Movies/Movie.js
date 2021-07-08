@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Popup from './Popup'
+
 import poster from '../../assets/posters/minpost.jpg'
 
 import classes from './Movie.module.css'
@@ -27,18 +29,7 @@ const MovieItem = () => {
               stroke='white'
               stroke-width='4'></circle>
           </svg>
-          <div className={classes.popup}>
-            <div className={classes.heading}>
-              <h1 className={classes.title}>French Exit</h1>
-              <p>1.56</p>
-            </div>
-            <div>
-              <p>Release Date: 2012</p>
-              <p>Country: US</p>
-              <p>Roles: Bradd Pitt, Matt Damon</p>
-              <p>Description: ...</p>
-            </div>
-          </div>
+          <Popup />
         </div>
       </div>
     </div>

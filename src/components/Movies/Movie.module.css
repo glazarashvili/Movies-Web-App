@@ -29,3 +29,10 @@
   top: calc(50% - 33px);
   left: calc(50% - 33px);
 }
+
+.popup {
+  position: relative;
+  top: 0;
+  left: 200px;
+  background: #fff;
+}

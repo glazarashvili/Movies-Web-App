@@ -10,8 +10,7 @@ const MainLayout = () => {
   let intViewportHeight = window.innerHeight
 
   const nextButtonClicked = () => {
-    if (posterIndex > posters.length) {
-      console.log('aeeeeee')
+    if (posterIndex > posters.length - 2) {
       setPosterIndex(0)
     } else if (posterIndex >= 0 && posterIndex < posters.length) {
       setPosterIndex(prevState => prevState + 1)
@@ -20,10 +19,9 @@ const MainLayout = () => {
 
   const prevButtonClicked = () => {
     if (posterIndex > posters.length) {
-      console.log('aeeeeee')
       setPosterIndex(0)
     } else if (posterIndex >= 0 && posterIndex < posters.length) {
-      setPosterIndex(prevState => prevState + 1)
+      setPosterIndex(prevState => prevState - 1)
     }
   }
 

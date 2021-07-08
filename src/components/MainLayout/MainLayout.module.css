@@ -1,0 +1,17 @@
+.main-layout {
+  width: 100%;
+}
+
+.arrowBack {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  transform: translateY(100%);
+}
+
+.arrowForward {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  transform: translateY(100%);
+}

@@ -18,8 +18,8 @@ const MainLayout = () => {
   }
 
   const prevButtonClicked = () => {
-    if (posterIndex > posters.length) {
-      setPosterIndex(0)
+    if (posterIndex < 1) {
+      setPosterIndex(posters.length - 1)
     } else if (posterIndex >= 0 && posterIndex < posters.length) {
       setPosterIndex(prevState => prevState - 1)
     }

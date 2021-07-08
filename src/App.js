@@ -3,6 +3,7 @@ import React from 'react'
 // import axios from 'axios'
 import MainLayout from './components/MainLayout/MainLayout'
 import MovieItem from './components/Movies/MovieItem'
+import Movies from './components/Movies/Movies'
 
 function App() {
   // React.useEffect(() => {
@@ -15,7 +16,7 @@ function App() {
     <div className='App'>
       <Header />
       <MainLayout />
-      <MovieItem />
+      <Movies />
     </div>
   )
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useLocation } from 'react-router-dom'
+
 import tvSvg from '../../assets/svg/tv.svg'
 import arrowSvg from '../../assets/svg/circle.svg'
 import circleSvg from '../../assets/svg/arrow.svg'
@@ -9,8 +11,19 @@ import theaterSvg from '../../assets/svg/theater.svg'
 import classes from './Header.module.css'
 
 const Header = () => {
+  const [offset, setOffset] = React.useState(0)
+  React.useEffect(() => {
+    setTimeout(
+      (window.onscroll = () => {
+        setOffset(window.pageYOffset)
+      })
+    )
+  }, [])
+
+  const bgColor = offset < 350 ? 'transparent' : '#B3A2A2'
+
   return (
-    <div className={classes['header-bar']}>
+    <div className={classes['header-bar']} style={{ background: bgColor }}>
       <h1 className={classes.heading}>Cinemania</h1>
       <nav className={classes['header-navigation']}>
         <div>

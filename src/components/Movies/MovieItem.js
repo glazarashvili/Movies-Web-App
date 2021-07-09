@@ -14,15 +14,16 @@ const MovieItem = ({ date, actors, desc, country, title, duration }) => {
         <img className={classes.poster} src={poster} alt='poster' />
         <div className={classes.background}>
           <PlayerSvg className={classes['player-icon']} />
-          <Popup
-            date={date}
-            actors={actors}
-            desc={desc}
-            country={country}
-            title={title}
-            duration={duration}
-          />
         </div>
+        <Popup
+          hover={classes.popup}
+          date={date}
+          actors={actors}
+          desc={desc}
+          country={country}
+          title={title}
+          duration={duration}
+        />
       </div>
     </div>
   )

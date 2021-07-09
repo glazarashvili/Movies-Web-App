@@ -2,9 +2,9 @@ import React from 'react'
 
 import classes from './Popup.module.css'
 
-const Popup = ({ title, duration, date, country, actors, desc }) => {
+const Popup = ({ title, duration, date, country, actors, desc, hover }) => {
   return (
-    <div className={classes.popup}>
+    <div className={`${classes.popup} ${hover}`}>
       <div className={classes.heading}>
         <h1 className={classes.title}>{title}</h1>
         <p>{duration}</p>

@@ -4,13 +4,15 @@
   width: 300px;
   height: 270px;
   top: 0;
-  left: 190px;
+  left: 185px;
   background: #fff;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 350px;
+  z-index: 100;
+  display: none;
 }
 
 .title {

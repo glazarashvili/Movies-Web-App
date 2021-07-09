@@ -1,6 +1,6 @@
 .movies-menu {
-  padding: 20px 100px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 400px;
 }

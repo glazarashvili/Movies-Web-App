@@ -3,8 +3,8 @@
   transition: 0.6s ease-in;
   cursor: pointer;
   display: inline-block;
-  margin: 0 10px 10px 0;
   border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .movie-item:hover .popup {

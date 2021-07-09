@@ -11,14 +11,12 @@ import classes from './Header.module.css'
 const Header = () => {
   const [offset, setOffset] = React.useState(0)
   React.useEffect(() => {
-    setTimeout(
-      (window.onscroll = () => {
-        setOffset(window.pageYOffset)
-      })
-    )
+    window.onscroll = () => {
+      setOffset(window.pageYOffset)
+    }
   }, [])
 
-  const bgColor = offset < 350 ? 'transparent' : '#B3A2A2'
+  const bgColor = offset < 350 ? 'transparent' : 'rgb(180, 180, 180)'
 
   return (
     <div className={classes['header-bar']} style={{ background: bgColor }}>

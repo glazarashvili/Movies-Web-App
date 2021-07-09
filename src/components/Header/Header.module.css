@@ -1,15 +1,14 @@
 .header-bar {
   width: 100%;
-  background: rgb(216, 208, 208);
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  padding: 20px 100px;
+  padding: 20px 250px;
   top: 0;
   left: 0;
   background: transparent;
-  z-index: 100;
+  z-index: 300;
 }
 
 .heading {

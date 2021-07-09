@@ -2,16 +2,16 @@ import React from 'react'
 
 import Popup from './Popup'
 
-import poster from '../../assets/posters/minpost.jpg'
+// import poster from '../../assets/posters/minpost.jpg'
 
 import classes from './MovieItem.module.css'
 import PlayerSvg from '../SVG/PlayerSvg'
 
-const MovieItem = ({ date, actors, desc, country, title, duration }) => {
+const MovieItem = ({ date, actors, desc, country, title, duration, image }) => {
   return (
     <div>
       <div className={classes['movie-item']}>
-        <img className={classes.poster} src={poster} alt='poster' />
+        <img className={classes.poster} src={image} alt='poster' />
         <div className={classes.background}>
           <PlayerSvg className={classes['player-icon']} />
         </div>

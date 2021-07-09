@@ -2,8 +2,6 @@ import React from 'react'
 
 import Popup from './Popup'
 
-// import poster from '../../assets/posters/minpost.jpg'
-
 import classes from './MovieItem.module.css'
 import PlayerSvg from '../SVG/PlayerSvg'
 

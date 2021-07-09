@@ -16,31 +16,31 @@ const Header = () => {
     }
   }, [])
 
-  const bgColor = offset < 350 ? 'transparent' : 'rgba(36, 36, 24, 0.9)'
+  const bgColor = offset < 80 ? 'transparent' : 'rgba(36, 36, 24, 0.9)'
 
   return (
     <div className={classes['header-bar']} style={{ background: bgColor }}>
-      <h1 className={classes.heading}>Cinemania</h1>
+      <h1 className={`${classes.heading} ${classes.filter}`}>Cinemania</h1>
       <nav className={classes['header-navigation']}>
-        <div>
+        <div className={classes.filter}>
           <img src={movieSvg} alt='movieSvg' />
           <p>Movies</p>
         </div>
-        <div>
+        <div className={classes.filter}>
           <img src={tvSvg} alt='tvSvg' />
           <p>TV</p>
         </div>
-        <div>
+        <div className={classes.filter}>
           <img src={theaterSvg} alt='theaterSvg' />
-          <p>Cinemania</p>
+          <p>CINEMANIA</p>
         </div>
-        <div>
+        <div className={classes.filter}>
           <img src={arrowSvg} alt='arrowSvg' />
-          <p>TV Shows</p>
+          <p>TV SHOWS</p>
         </div>
-        <div>
+        <div className={classes.filter}>
           <img src={circleSvg} alt='circleSvg' />
-          <p>Player</p>
+          <p>PLAYER</p>
         </div>
       </nav>
     </div>

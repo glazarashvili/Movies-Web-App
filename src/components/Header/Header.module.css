@@ -40,3 +40,7 @@
   font-size: 12px;
   margin-top: 5px;
 }
+
+.filter:hover {
+  filter: invert(27%) sepia(20%) saturate(2878%) brightness(104%) contrast(97%);
+}

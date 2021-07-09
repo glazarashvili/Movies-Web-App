@@ -16,7 +16,7 @@ const Header = () => {
     }
   }, [])
 
-  const bgColor = offset < 350 ? 'transparent' : 'rgb(180, 180, 180)'
+  const bgColor = offset < 350 ? 'transparent' : 'rgba(36, 36, 24, 0.9)'
 
   return (
     <div className={classes['header-bar']} style={{ background: bgColor }}>

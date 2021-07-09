@@ -5,6 +5,8 @@ import classes from './MainLayout.module.css'
 import posters from './index'
 import ArrowForward from '../SVG/ArrowForward'
 import ArrowBack from '../SVG/ArrowBack'
+import Input from './Input'
+import SearchIcon from '../SVG/SearchIcon'
 
 const MainLayout = () => {
   const [posterIndex, setPosterIndex] = React.useState(0)
@@ -48,6 +50,10 @@ const MainLayout = () => {
         className={classes.arrowForward}
         buttonClickHandler={nextButtonClicked}
       />
+      <div>
+        <Input />
+        <SearchIcon />
+      </div>
     </div>
   )
 }

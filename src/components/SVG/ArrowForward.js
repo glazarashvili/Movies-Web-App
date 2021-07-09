@@ -10,10 +10,7 @@ const ArrowForward = ({ className, buttonClickHandler }) => {
       viewBox='0 0 34 172'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'>
-      <path
-        d='M1.09091 171L32 86L1.09092 1'
-        stroke='#999999'
-        stroke-width='2'></path>
+      <path d='M1.09091 171L32 86L1.09092 1' stroke='#999999'></path>
     </svg>
   )
 }

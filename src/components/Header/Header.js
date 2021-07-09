@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { useLocation } from 'react-router-dom'
-
 import tvSvg from '../../assets/svg/tv.svg'
 import arrowSvg from '../../assets/svg/circle.svg'
 import circleSvg from '../../assets/svg/arrow.svg'

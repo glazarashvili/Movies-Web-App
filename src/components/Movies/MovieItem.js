@@ -4,7 +4,7 @@ import Popup from './Popup'
 
 import poster from '../../assets/posters/minpost.jpg'
 
-import classes from './Movie.module.css'
+import classes from './MovieItem.module.css'
 import PlayerSvg from '../SVG/PlayerSvg'
 
 const MovieItem = ({ date, actors, desc, country, title, duration }) => {

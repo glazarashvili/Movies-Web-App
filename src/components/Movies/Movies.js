@@ -49,6 +49,33 @@ const DATA = [
     country: 'Denmark',
     img: '',
   },
+  {
+    id: 4,
+    duration: '2.31',
+    desc: '...',
+    title: 'inception',
+    date: 2012,
+    country: 'Denmark',
+    img: '',
+  },
+  {
+    id: 4,
+    duration: '2.31',
+    desc: '...',
+    title: 'inception',
+    date: 2012,
+    country: 'Denmark',
+    img: '',
+  },
+  {
+    id: 4,
+    duration: '2.31',
+    desc: '...',
+    title: 'inception',
+    date: 2012,
+    country: 'Denmark',
+    img: '',
+  },
 ]
 
 const Movies = () => {

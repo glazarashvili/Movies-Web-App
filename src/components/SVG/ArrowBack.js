@@ -10,10 +10,7 @@ const ArrowBack = ({ className, buttonClickHandler }) => {
       viewBox='0 0 34 172'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'>
-      <path
-        d='M32.9091 1L2 86L32.9091 171'
-        stroke='#999999'
-        stroke-width='2'></path>
+      <path d='M32.9091 1L2 86L32.9091 171' stroke='#999999'></path>
     </svg>
   )
 }

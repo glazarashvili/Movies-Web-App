@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MoviesPage = () => {
-  return <div>MoviesPage</div>
+  return <div style={{ marginTop: '123px' }}>MoviesPage</div>
 }
 
 export default MoviesPage

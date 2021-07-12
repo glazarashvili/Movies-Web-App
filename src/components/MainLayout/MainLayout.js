@@ -50,7 +50,7 @@ const MainLayout = () => {
         className={classes.arrowForward}
         buttonClickHandler={nextButtonClicked}
       />
-      <div>
+      <div className={classes['search-bar']}>
         <Input />
         <SearchIcon />
       </div>

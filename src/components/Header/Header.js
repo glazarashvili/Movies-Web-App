@@ -5,9 +5,9 @@ import { NavLink, useLocation } from 'react-router-dom'
 import classes from './Header.module.css'
 
 import tvSvg from '../../assets/svg/tv.svg'
+import movieSvg from '../../assets/svg/movie.svg'
 import arrowSvg from '../../assets/svg/circle.svg'
 import circleSvg from '../../assets/svg/arrow.svg'
-import movieSvg from '../../assets/svg/movie.svg'
 import theaterSvg from '../../assets/svg/theater.svg'
 
 const Header = () => {

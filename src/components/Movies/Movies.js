@@ -50,7 +50,7 @@ const DATA = [
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_60ZCWthGY0B4C8qMNDj8U-ll-aPgMAUYg&usqp=CAU',
   },
   {
-    id: 4,
+    id: 5,
     duration: '2.31',
     desc: '...',
     title: 'inception',
@@ -59,7 +59,7 @@ const DATA = [
     img: 'https://assets.mubicdn.net/images/notebook/post_images/19893/images-w1400.jpg?1449196747',
   },
   {
-    id: 4,
+    id: 6,
     duration: '2.31',
     desc: '...',
     title: 'inception',
@@ -68,7 +68,7 @@ const DATA = [
     img: 'https://www.joblo.com/assets/images/oldsite/posters/images/full/logan-poster-sunset-2_thumb.jpg',
   },
   {
-    id: 4,
+    id: 7,
     duration: '2.31',
     desc: '...',
     title: 'inception',
@@ -77,7 +77,7 @@ const DATA = [
     img: 'https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/89058/93685/Joker-2019-Final-Style-steps-Poster-buy-original-movie-posters-at-starstills__62518.1572351179.jpg?c=2',
   },
   {
-    id: 0,
+    id: 8,
     duration: '1,58',
     desc: '...',
     title: 'inception',
@@ -86,7 +86,7 @@ const DATA = [
     img: 'https://etcanada.com/wp-content/uploads/2018/05/dr-seuss-the-grinch-grc_adv1sheet_grinchface_rgb_2_rgb.jpg?quality=80&strip=all&w=605',
   },
   {
-    id: 0,
+    id: 9,
     duration: '1,58',
     desc: '...',
     title: 'inception',
@@ -95,7 +95,7 @@ const DATA = [
     img: 'https://cdn.shopify.com/s/files/1/1057/4964/products/the-craft-vintage-movie-poster-original-1-sheet-27x41.jpg?v=1593378233',
   },
   {
-    id: 0,
+    id: 10,
     duration: '1,58',
     desc: '...',
     title: 'inception',
@@ -104,7 +104,7 @@ const DATA = [
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9NsUkIk_MNLD8u8I0RbLuWFoQpkHUOVPAGg&usqp=CAU',
   },
   {
-    id: 0,
+    id: 11,
     duration: '1,58',
     desc: '...',
     title: 'inception',
@@ -113,7 +113,7 @@ const DATA = [
     img: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1576732289',
   },
   {
-    id: 0,
+    id: 12,
     duration: '1,58',
     desc: '...',
     title: 'inception',
@@ -122,7 +122,7 @@ const DATA = [
     img: 'https://assets.mubicdn.net/images/notebook/post_images/17514/images-w1400.jpg?1418357012',
   },
   {
-    id: 0,
+    id: 13,
     duration: '1,58',
     desc: '...',
     title: 'inception',
@@ -131,7 +131,7 @@ const DATA = [
     img: 'https://d2kektcjb0ajja.cloudfront.net/images/assets/images/000/000/196/medium-1466556840-160617_TomaszOpasinskiMoviePosterDesignTips_Oblivion.jpg?1466556840',
   },
   {
-    id: 0,
+    id: 14,
     duration: '1,58',
     desc: '...',
     title: 'inception',

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import classes from './Header.module.css'
 
@@ -18,7 +18,13 @@ const Header = () => {
     }
   }, [])
 
-  const bgColor = offset < 80 ? 'transparent' : 'rgba(36, 36, 24, 0.9)'
+  const location = useLocation()
+  console.log(location.pathname)
+
+  const bgColor =
+    offset < 80 && location.pathname === '/home'
+      ? 'transparent'
+      : 'rgba(36, 36, 24, 0.9)'
 
   return (
     <div className={classes['header-bar']} style={{ background: bgColor }}>

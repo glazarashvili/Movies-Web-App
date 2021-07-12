@@ -1,8 +1,8 @@
 import Header from './components/Header/Header'
 import React from 'react'
 // import axios from 'axios'
-import MainLayout from './components/MainLayout/MainLayout'
-import Movies from './components/Movies/Movies'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import HomePage from './pages/HomePage'
 
 function App() {
   // React.useEffect(() => {
@@ -12,11 +12,12 @@ function App() {
   // })
 
   return (
-    <div className='App'>
+    <Router>
       <Header />
-      <MainLayout />
-      <Movies />
-    </div>
+      <Route pathname='/' exact>
+        <HomePage />
+      </Route>
+    </Router>
   )
 }
 

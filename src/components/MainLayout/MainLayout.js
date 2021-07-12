@@ -9,7 +9,9 @@ import Input from './Input'
 import SearchIcon from '../SVG/SearchIcon'
 
 const MainLayout = () => {
+  const [popupShown, setPopupShown] = React.useState(false)
   const [posterIndex, setPosterIndex] = React.useState(0)
+
   let intViewportHeight = window.innerHeight
 
   const nextButtonClicked = () => {
@@ -29,30 +31,43 @@ const MainLayout = () => {
   }
 
   return (
-    <div
-      className={classes['main-layout']}
-      style={{ height: intViewportHeight / 2 }}>
-      <img
-        style={{
-          backgroundSize: 'hover',
-          height: '100%',
-          objectFit: 'cover',
-          width: '100%',
-        }}
-        src={posters[posterIndex].url}
-        alt='poster'
-      />
-      <ArrowBack
-        className={classes.arrowBack}
-        buttonClickHandler={prevButtonClicked}
-      />
-      <ArrowForward
-        className={classes.arrowForward}
-        buttonClickHandler={nextButtonClicked}
-      />
+    <div className={classes.layout}>
+      <div
+        className={classes['main-layout']}
+        style={{ height: intViewportHeight / 2 }}>
+        <img
+          style={{
+            backgroundSize: 'hover',
+            height: '100%',
+            objectFit: 'cover',
+            width: '100%',
+          }}
+          src={posters[posterIndex].url}
+          alt='poster'
+        />
+        <ArrowBack
+          className={classes.arrowBack}
+          buttonClickHandler={prevButtonClicked}
+        />
+        <ArrowForward
+          className={classes.arrowForward}
+          buttonClickHandler={nextButtonClicked}
+        />
+      </div>
+
       <div className={classes['search-bar']}>
-        <Input />
+        <Input
+          onFocus={() => setPopupShown(true)}
+          onBlur={() => setPopupShown(false)}
+        />
         <SearchIcon />
+      </div>
+
+      <div
+        className={`${classes['search-popup']} ${
+          popupShown ? classes.onfocus : ''
+        } `}>
+        Moviees
       </div>
     </div>
   )

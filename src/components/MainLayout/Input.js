@@ -2,14 +2,15 @@ import React from 'react'
 
 import classes from './Input.module.css'
 
-const Input = ({ onFocus, onBlur }) => {
+const Input = ({ onFocus, onBlur, zIndex }) => {
   return (
     <input
       placeholder='Search...'
       type='search'
       onBlur={onBlur}
       onFocus={onFocus}
-      className={`${classes['search-input']}`}
+      style={{ zIndex: zIndex }}
+      className={classes['search-input']}
     />
   )
 }

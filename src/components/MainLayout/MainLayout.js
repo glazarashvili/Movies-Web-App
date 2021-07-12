@@ -54,20 +54,21 @@ const MainLayout = () => {
           buttonClickHandler={nextButtonClicked}
         />
       </div>
-
       <div className={classes['search-bar']}>
         <Input
+          zIndex={popupShown ? 2000 : null}
           onFocus={() => setPopupShown(true)}
           onBlur={() => setPopupShown(false)}
         />
         <SearchIcon />
-      </div>
-
-      <div
-        className={`${classes['search-popup']} ${
-          popupShown ? classes.onfocus : ''
-        } `}>
-        Moviees
+        {popupShown && (
+          <React.Fragment>
+            <div className={classes['search-popup']}>
+              <img src='https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg' />
+            </div>
+            <div className={classes.backdrop}></div>
+          </React.Fragment>
+        )}
       </div>
     </div>
   )

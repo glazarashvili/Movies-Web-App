@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Route pathname='/' exact>
+      <Route pathname='/home' exact>
         <HomePage />
       </Route>
     </Router>

@@ -7,18 +7,18 @@ import PlayerSvg from '../SVG/PlayerSvg'
 
 const MovieItem = ({
   date,
-  actors,
   desc,
-  country,
   title,
-  duration,
   image,
+  actors,
+  country,
+  duration,
   leftPosition,
   rightPosition,
 }) => {
   const refContainer = React.useRef()
 
-  const position =
+  let offset =
     refContainer?.current?.offsetLeft - 500 < 0
       ? leftPosition
       : refContainer?.current?.offsetLeft + 230 > window.innerWidth
@@ -27,10 +27,15 @@ const MovieItem = ({
       ? rightPosition
       : refContainer?.current?.offsetLeft - 1000 < 0
       ? leftPosition
-      : rightPosition
+      : leftPosition
+
+  const [position, setPosition] = React.useState(null)
+  React.useEffect(() => {
+    setPosition(offset)
+  }, [offset])
 
   return (
-    <div ref={refContainer}>
+    <div ref={refContainer} className='ref'>
       <div className={classes['movie-item']}>
         <img className={classes.poster} src={image} alt='poster' />
         <div className={classes.background}>

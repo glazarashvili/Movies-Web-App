@@ -147,10 +147,12 @@ const Movies = () => {
   React.useEffect(() => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth)
-      console.log('windowwidth', windowWidth)
-      console.log(1200 > window.innerWidth)
+      // console.log('windowwidth', windowWidth)
+      // console.log(1200 > window.innerWidth)
     })
-  })
+  }, [windowWidth])
+
+  console.log('window width', window.innerWidth)
 
   return (
     <div className={classes['movies-menu']}>

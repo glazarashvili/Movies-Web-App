@@ -18,13 +18,16 @@ const MovieItem = ({
 }) => {
   const refContainer = React.useRef()
 
-  React.useEffect(() => {
-    console.log(refContainer.current.offsetLeft)
-  })
-
-  console.log('xxxx', window.innerWidth)
-
-  console.log(refContainer?.current?.offsetLeft + 230 > window.innerWidth)
+  const position =
+    refContainer?.current?.offsetLeft - 500 < 0
+      ? leftPosition
+      : refContainer?.current?.offsetLeft + 230 > window.innerWidth
+      ? rightPosition
+      : refContainer?.current?.offsetLeft + 700 > window.innerWidth
+      ? rightPosition
+      : refContainer?.current?.offsetLeft - 1000 < 0
+      ? leftPosition
+      : rightPosition
 
   return (
     <div ref={refContainer}>
@@ -40,14 +43,8 @@ const MovieItem = ({
           actors={actors}
           country={country}
           duration={duration}
+          position={position}
           hover={classes.popup}
-          position={
-            refContainer?.current?.offsetLeft - 230 < 50
-              ? leftPosition
-              : refContainer?.current?.offsetLeft + 230 > window.innerWidth
-              ? rightPosition
-              : rightPosition
-          }
         />
       </div>
     </div>

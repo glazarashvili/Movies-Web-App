@@ -1,6 +1,8 @@
 import React from 'react'
 import MovieItem from './MovieItem'
 
+import { useParams } from 'react-router-dom'
+
 import classes from './Movies.module.css'
 
 const DATA = [
@@ -147,12 +149,8 @@ const Movies = () => {
   React.useEffect(() => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth)
-      // console.log('windowwidth', windowWidth)
-      // console.log(1200 > window.innerWidth)
     })
   }, [windowWidth])
-
-  console.log('window width', window.innerWidth)
 
   return (
     <div className={classes['movies-menu']}>

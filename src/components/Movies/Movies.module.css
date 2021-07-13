@@ -25,3 +25,11 @@
     grid-template-columns: repeat(3, 180px);
   }
 }
+
+.left-position {
+  left: 185px;
+}
+
+.right-position {
+  right: 185px;
+}

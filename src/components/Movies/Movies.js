@@ -142,18 +142,30 @@ const DATA = [
 ]
 
 const Movies = () => {
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+
+  React.useEffect(() => {
+    window.addEventListener('resize', () => {
+      setWindowWidth(window.innerWidth)
+      console.log('windowwidth', windowWidth)
+      console.log(1200 > window.innerWidth)
+    })
+  })
+
   return (
     <div className={classes['movies-menu']}>
       {DATA.map(movie => {
         return (
           <MovieItem
             key={movie.id}
-            title={movie.title}
             desc={movie.desc}
-            duration={movie.duration}
-            date={movie.date}
-            country={movie.country}
             image={movie.img}
+            date={movie.date}
+            title={movie.title}
+            country={movie.country}
+            duration={movie.duration}
+            leftPosition={classes['left-position']}
+            rightPosition={classes['right-position']}
           />
         )
       })}

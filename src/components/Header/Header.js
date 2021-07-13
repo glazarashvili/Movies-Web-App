@@ -19,7 +19,6 @@ const Header = () => {
   }, [])
 
   const location = useLocation()
-  console.log(location.pathname)
 
   const bgColor =
     offset < 80 && location.pathname === '/home'

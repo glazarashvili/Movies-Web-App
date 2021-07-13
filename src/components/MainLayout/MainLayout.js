@@ -3,8 +3,8 @@ import React from 'react'
 import classes from './MainLayout.module.css'
 
 import posters from './index'
-import ArrowBack from '../SVG/ArrowBack'
 import SearchInput from './SearchInput'
+import ArrowBack from '../SVG/ArrowBack'
 import SearchIcon from '../SVG/SearchIcon'
 import ArrowForward from '../SVG/ArrowForward'
 

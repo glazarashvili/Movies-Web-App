@@ -3,10 +3,10 @@ import React from 'react'
 import classes from './MainLayout.module.css'
 
 import posters from './index'
-import ArrowForward from '../SVG/ArrowForward'
 import ArrowBack from '../SVG/ArrowBack'
-import Input from './Input'
+import SearchInput from './SearchInput'
 import SearchIcon from '../SVG/SearchIcon'
+import ArrowForward from '../SVG/ArrowForward'
 
 const MainLayout = () => {
   const [popupShown, setPopupShown] = React.useState(false)
@@ -55,8 +55,8 @@ const MainLayout = () => {
         />
       </div>
       <div className={classes['search-bar']}>
-        <Input
-          zIndex={popupShown ? 2000 : null}
+        <SearchInput
+          zIndex={popupShown ? 2000 : ''}
           onFocus={() => setPopupShown(true)}
           onBlur={() => setPopupShown(false)}
         />
@@ -64,7 +64,10 @@ const MainLayout = () => {
         {popupShown && (
           <React.Fragment>
             <div className={classes['search-popup']}>
-              <img src='https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg' />
+              <img
+                src='https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg'
+                alt='adv-poster'
+              />
             </div>
             <div className={classes.backdrop}></div>
           </React.Fragment>

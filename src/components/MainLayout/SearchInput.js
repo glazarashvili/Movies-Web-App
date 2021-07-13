@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './Input.module.css'
 
-const Input = ({ onFocus, onBlur, zIndex }) => {
+const SearchInput = ({ onFocus, onBlur, zIndex }) => {
   return (
     <input
       placeholder='Search...'
@@ -15,4 +15,4 @@ const Input = ({ onFocus, onBlur, zIndex }) => {
   )
 }
 
-export default Input
+export default SearchInput

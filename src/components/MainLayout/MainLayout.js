@@ -58,7 +58,6 @@ const MainLayout = () => {
         <SearchInput
           zIndex={popupShown ? 2000 : ''}
           onFocus={() => setPopupShown(true)}
-          onBlur={() => setPopupShown(false)}
         />
         <SearchIcon />
         {popupShown && (
@@ -69,7 +68,9 @@ const MainLayout = () => {
                 alt='adv-poster'
               />
             </div>
-            <div className={classes.backdrop}></div>
+            <div
+              onClick={() => setPopupShown(false)}
+              className={classes.backdrop}></div>
           </React.Fragment>
         )}
       </div>

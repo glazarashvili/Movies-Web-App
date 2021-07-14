@@ -1,7 +1,7 @@
 import React from 'react'
 import MovieItem from './MovieItem'
 
-import { useParams } from 'react-router-dom'
+import { fetchMovies } from '../../service/index'
 
 import classes from './Movies.module.css'
 
@@ -145,30 +145,42 @@ const DATA = [
 
 const Movies = () => {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+  const [movies, setMovies] = React.useState([])
 
   React.useEffect(() => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth)
     })
-  }, [windowWidth])
+  })
+
+  React.useEffect(() => {
+    const fetchAPI = async () => {
+      setMovies(await fetchMovies())
+    }
+
+    fetchAPI()
+  }, [])
+
+  console.log('movies', movies)
 
   return (
     <div className={classes['movies-menu']}>
-      {DATA.map(movie => {
-        return (
-          <MovieItem
-            key={movie.id}
-            desc={movie.desc}
-            image={movie.img}
-            date={movie.date}
-            title={movie.title}
-            country={movie.country}
-            duration={movie.duration}
-            leftPosition={classes['left-position']}
-            rightPosition={classes['right-position']}
-          />
-        )
-      })}
+      {movies.length
+        ? movies.map(movie => {
+            return (
+              <MovieItem
+                key={movie.id}
+                image={movie.image}
+                title={movie.title}
+                desc={movie.desc}
+                // language={}
+                date={movie.release_date}
+                leftPosition={classes['left-position']}
+                rightPosition={classes['right-position']}
+              />
+            )
+          })
+        : null}
     </div>
   )
 }

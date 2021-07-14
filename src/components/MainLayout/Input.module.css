@@ -10,7 +10,6 @@
   border: 1px solid transparent;
   background: #e5e5e5;
   transition: 0.4s ease-in-out;
-  /* z-index: 2000; */
 }
 
 .search-input:hover,

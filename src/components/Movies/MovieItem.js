@@ -11,9 +11,7 @@ const MovieItem = ({
   desc,
   title,
   image,
-  actors,
-  country,
-  duration,
+  language,
   leftPosition,
   rightPosition,
 }) => {
@@ -45,9 +43,7 @@ const MovieItem = ({
             desc={desc}
             date={date}
             title={title}
-            actors={actors}
-            country={country}
-            duration={duration}
+            language={language}
             position={position}
             hover={classes.popup}
           />

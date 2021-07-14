@@ -23,7 +23,7 @@ export const fetchMovies = async () => {
     image: posterUrl + item.poster_path,
     language: item.original_language,
     desc: item.overview,
-    release_date: item.release_date,
+    release_date: item.release_date.slice(0, 4),
     ranking: item.vote_average,
   }))
   console.log('data', modifiedData)

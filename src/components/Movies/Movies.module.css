@@ -8,6 +8,14 @@
   grid-gap: 20px;
 }
 
+.left-position {
+  left: 185px;
+}
+
+.right-position {
+  right: 185px;
+}
+
 @media (min-width: 1600px) {
   .movies-menu {
     grid-template-columns: repeat(5, 180px);
@@ -24,12 +32,4 @@
   .movies-menu {
     grid-template-columns: repeat(3, 180px);
   }
-}
-
-.left-position {
-  left: 185px;
-}
-
-.right-position {
-  right: 185px;
 }

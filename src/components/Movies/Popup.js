@@ -10,7 +10,6 @@ const Popup = ({ title, language, ranking, date, desc, hover, position }) => {
           <h1 className={classes.title}>{title}</h1>
           <h1 className={classes.language}>{language}</h1>
         </div>
-
         <div>
           <p>
             <span>Release Date:</span> {date}
@@ -19,7 +18,6 @@ const Popup = ({ title, language, ranking, date, desc, hover, position }) => {
             <span>Description:</span> {desc}
           </p>
         </div>
-
         <div className={classes.ranking}>
           <span>IMDB:</span>
           <p>{ranking}</p>

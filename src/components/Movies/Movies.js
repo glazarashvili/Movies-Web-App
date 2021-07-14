@@ -19,7 +19,6 @@ const Movies = () => {
     const fetchAPI = async () => {
       setMovies(await fetchMovies())
     }
-
     fetchAPI()
   }, [])
 

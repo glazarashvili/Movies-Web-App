@@ -24,6 +24,7 @@ export const fetchMovies = async () => {
     language: item.original_language,
     desc: item.overview,
     release_date: item.release_date,
+    ranking: item.vote_average,
   }))
   console.log('data', modifiedData)
 

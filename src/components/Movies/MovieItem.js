@@ -11,11 +11,13 @@ const MovieItem = ({
   desc,
   title,
   image,
+  ranking,
   language,
   leftPosition,
   rightPosition,
 }) => {
   const refContainer = React.useRef()
+  const [position, setPosition] = React.useState(null)
 
   let offset =
     refContainer?.current?.offsetLeft - 500 < 0
@@ -26,7 +28,6 @@ const MovieItem = ({
       ? leftPosition
       : leftPosition
 
-  const [position, setPosition] = React.useState(null)
   React.useEffect(() => {
     setPosition(offset)
   }, [offset])
@@ -43,6 +44,7 @@ const MovieItem = ({
             desc={desc}
             date={date}
             title={title}
+            ranking={ranking}
             language={language}
             position={position}
             hover={classes.popup}

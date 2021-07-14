@@ -24,14 +24,6 @@ export const fetchMovies = async () => {
     language: item.original_language,
     desc: item.overview,
     release_date: item.release_date,
-
-    // id: m['id'],
-    // backPoster: posterUrl + m['backdrop_path'],
-    // popularity: m['popularith'],
-    // title: m['title'],
-    // poster: posterUrl + m['poster_path'],
-    // overview: m['overview'],
-    // rating: m['vote_average'],
   }))
   console.log('data', modifiedData)
 

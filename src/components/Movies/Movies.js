@@ -173,7 +173,7 @@ const Movies = () => {
                 image={movie.image}
                 title={movie.title}
                 desc={movie.desc}
-                // language={}
+                language={movie.language}
                 date={movie.release_date}
                 leftPosition={classes['left-position']}
                 rightPosition={classes['right-position']}

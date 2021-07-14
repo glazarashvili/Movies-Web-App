@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 import classes from './Header.module.css'
 
@@ -27,9 +27,9 @@ const Header = () => {
 
   return (
     <div className={classes['header-bar']} style={{ background: bgColor }}>
-      <NavLink to='/home' activeClassName={classes['nav-link']}>
-        <h1 className={`${classes.heading} ${classes.filter}`}>Cinemania</h1>
-      </NavLink>
+      <Link to='/home'>
+        <h1 className={`${classes.heading}`}>Cinemania</h1>
+      </Link>
       <nav className={classes['header-navigation']}>
         <NavLink to='/movies' activeClassName={classes['nav-link']}>
           <div className={classes.filter}>

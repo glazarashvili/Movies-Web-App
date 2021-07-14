@@ -12,7 +12,7 @@ const Popup = ({ title, language, date, desc, hover, position }) => {
       <p>
         <span>Release Date:</span> {date}
       </p>
-      <p>
+      <p className={classes.elipsis}>
         <span>Description:</span> {desc}
       </p>
     </div>

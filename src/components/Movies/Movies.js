@@ -22,9 +22,9 @@ const Movies = () => {
     fetchAPI()
   }, [])
 
-  console.log('movies', movies)
+  // console.log('movies', movies)
 
-  searchMovie()
+  // searchMovie()
 
   return (
     <div className={classes['movies-menu']}>

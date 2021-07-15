@@ -52,3 +52,8 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
 }
+
+.background {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 500px;
+}

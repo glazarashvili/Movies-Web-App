@@ -30,14 +30,15 @@ export const fetchMovies = async () => {
     desc: item.overview,
     release_date: item.release_date.slice(0, 4),
     ranking: item.vote_average,
+    poster: posterUrl + item?.backdrop_path,
   }))
-  console.log('data', modifiedData)
+  // console.log('data', modifiedData)
 
   return modifiedData
 }
 
-export const searchMovie = () => {
-  axios
-    .get(`${url}/discover/movie/?api_key=${apiKey}`)
-    .then(response => console.log('eeees', response))
-}
+// export const searchMovie = () => {
+//   axios
+//     .get(`${url}/discover/movie/?api_key=${apiKey}`)
+//     .then(response => console.log('eeees', response))
+// }

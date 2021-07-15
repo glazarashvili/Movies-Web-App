@@ -3,7 +3,7 @@ import React from 'react'
 import Popup from './Popup'
 
 import classes from './MovieItem.module.css'
-import PlayerSvg from '../SVG/PlayerSvg'
+import PlayerSvg from '../../SVG/PlayerSvg'
 import { Link } from 'react-router-dom'
 
 const MovieItem = ({

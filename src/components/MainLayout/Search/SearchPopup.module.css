@@ -4,6 +4,10 @@
   top: 30px;
 }
 
+.poster {
+  border: 2px solid orange;
+}
+
 .fade-animation {
   animation: animate 0.3s linear;
 }

@@ -16,14 +16,14 @@ const SearchPopup = ({ className, popupShown }) => {
         <img
           src='https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg'
           alt='adv-poster'
+          className={classes.poster}
+          // style={{ width:   }}
         />
       </div>
       <div
         onClick={popupShown}
         className={`${className} ${classes['fade-animation']}`}
-        ref={overlayRef}>
-        adsf
-      </div>
+        ref={overlayRef}></div>
     </React.Fragment>
   )
 }

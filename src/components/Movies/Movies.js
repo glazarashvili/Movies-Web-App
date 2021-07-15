@@ -1,7 +1,7 @@
 import React from 'react'
 import MovieItem from './MovieItem'
 
-import { fetchMovies, searchMovie } from '../../service/index'
+import { fetchMovies } from '../../service/index'
 
 import classes from './Movies.module.css'
 
@@ -21,10 +21,6 @@ const Movies = () => {
     }
     fetchAPI()
   }, [])
-
-  // console.log('movies', movies)
-
-  // searchMovie()
 
   return (
     <div className={classes['movies-menu']}>

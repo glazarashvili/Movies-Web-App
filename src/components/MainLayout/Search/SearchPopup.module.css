@@ -1,11 +1,7 @@
 .search-popup {
   position: absolute;
   z-index: 10000;
-  top: 30px;
-}
-
-.poster {
-  border: 2px solid orange;
+  top: 28px;
 }
 
 .fade-animation {

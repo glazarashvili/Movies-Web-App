@@ -9,6 +9,8 @@ const SearchPopup = ({ className, popupShown }) => {
     console.log(overlayRef.current, 'current')
   }, [])
 
+  const popupWidth = window.innerWidth / 2 + 20
+
   return (
     <React.Fragment>
       <div
@@ -16,8 +18,7 @@ const SearchPopup = ({ className, popupShown }) => {
         <img
           src='https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg'
           alt='adv-poster'
-          className={classes.poster}
-          // style={{ width:   }}
+          style={{ width: popupWidth, border: '5px' }}
         />
       </div>
       <div

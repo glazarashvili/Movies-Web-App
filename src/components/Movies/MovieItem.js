@@ -6,8 +6,6 @@ import classes from './MovieItem.module.css'
 import PlayerSvg from '../SVG/PlayerSvg'
 import { Link } from 'react-router-dom'
 
-import { offset } from './index'
-
 const MovieItem = ({
   date,
   desc,

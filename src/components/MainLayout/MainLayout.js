@@ -56,9 +56,7 @@ const MainLayout = () => {
           buttonClickHandler={nextButtonClicked}
         />
       </div>
-      <div>
-        <Search />
-      </div>
+      <Search />
     </div>
   )
 }

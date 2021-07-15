@@ -3,3 +3,17 @@
   z-index: 10000;
   top: 30px;
 }
+
+.fade-animation {
+  animation: animate 0.3s linear;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

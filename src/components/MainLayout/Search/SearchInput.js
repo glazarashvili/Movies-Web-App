@@ -1,6 +1,6 @@
 import React from 'react'
 
-import classes from './Input.module.css'
+import classes from './SearchInput.module.css'
 
 const SearchInput = ({ onFocus, onBlur, zIndex }) => {
   return (

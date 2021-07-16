@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import MoviesPage from './pages/MoviesPage'
 import TvShowsPage from './pages/TvShowsPage'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   // React.useEffect(() => {
@@ -29,6 +30,7 @@ const App = () => {
       <Route path='/tvshows'>
         <TvShowsPage />
       </Route>
+      <Footer />
     </Router>
   )
 }

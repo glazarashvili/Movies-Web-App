@@ -35,10 +35,6 @@
   font-family: 'Faster One', cursive;
 }
 
-.header-bar img {
-  margin: 0px 10px;
-}
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -61,7 +57,7 @@
   animation: moveInRight 0.3s ease-out 0.2s forwards;
 }
 
-.header-navigation div {
+.nav-item {
   margin: 15px;
   display: flex;
   justify-content: center;
@@ -70,13 +66,17 @@
   cursor: pointer;
 }
 
-.header-navigation p {
+.nav-item > p {
   font-size: 10px;
   margin-top: 10px;
   font-weight: bold;
   font-size: 10px;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
 }
 
 .before-scroll {
@@ -84,7 +84,7 @@
 }
 
 .after-scroll {
-  color: #2f83c6;
+  color: #495057;
 }
 
 @media (max-width: 1200px) {
@@ -95,8 +95,4 @@
   .heading {
     font-size: 24px;
   }
-}
-
-.nav-link {
-  text-decoration: none;
 }

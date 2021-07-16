@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  padding: 20px 250px;
+  padding: 10px 250px;
   top: 0;
   left: 0;
   background: transparent;
@@ -58,7 +58,7 @@
 .header-navigation {
   display: flex;
   opacity: 0;
-  animation: moveInRight 0.5s ease-out 0.2s forwards;
+  animation: moveInRight 0.3s ease-out 0.2s forwards;
 }
 
 .header-navigation div {

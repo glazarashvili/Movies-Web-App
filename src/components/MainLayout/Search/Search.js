@@ -15,7 +15,10 @@ const Search = () => {
         zIndex={popupShown ? 2000 : 0}
         onFocus={() => setPopupShown(true)}
       />
-      <SearchIcon zIndex={popupShown ? 2000 : 0} />
+      <SearchIcon
+        zIndex={popupShown ? 2000 : 0}
+        onSearchIconClick={() => setPopupShown(true)}
+      />
       {popupShown && (
         <SearchPopup
           className={classes.backdrop}

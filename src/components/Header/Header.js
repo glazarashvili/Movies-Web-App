@@ -21,8 +21,8 @@ const Header = () => {
   const location = useLocation()
 
   const check = offset < 80 && location.pathname === '/home'
-  const fill = check ? 'white' : 'black'
-  const bgColor = check ? 'transparent' : 'white'
+  const fill = check ? '#fff' : '#2F83C6'
+  const bgColor = check ? 'transparent' : '#fff'
   const fontColor = check ? classes['before-scroll'] : classes['after-scroll']
 
   return (

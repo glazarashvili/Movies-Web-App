@@ -38,6 +38,7 @@ const MainLayout = () => {
   }, [])
 
   const imageSrc = layoutMovies[randomPicIndex]?.poster
+  const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${imageSrc}) no-repeat center center/cover`
 
   return (
     <div className={classes.layout}>
@@ -45,7 +46,7 @@ const MainLayout = () => {
         className={classes['main-layout']}
         style={{
           height: window.innerHeight / 2,
-          background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${imageSrc}) no-repeat center center/cover`,
+          background: background,
         }}>
         <ArrowBack
           className={classes.arrowBack}

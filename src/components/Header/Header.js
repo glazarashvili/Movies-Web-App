@@ -21,7 +21,7 @@ const Header = () => {
   const location = useLocation()
 
   const check = offset < 80 && location.pathname === '/home'
-  const fill = check ? '#fff' : '#2F83C6'
+  const fill = check ? '#fff' : '#495057'
   const bgColor = check ? 'transparent' : '#fff'
   const fontColor = check ? classes['before-scroll'] : classes['after-scroll']
 
@@ -34,25 +34,25 @@ const Header = () => {
       </Link>
       <nav className={classes['header-navigation']}>
         <NavLink activeClassName={classes['nav-link']} to='/tv'>
-          <div>
+          <div className={classes['nav-item']}>
             <MovieSvg fill={fill} />
             <p className={fontColor}>MOVIES</p>
           </div>
         </NavLink>
         <NavLink to='/movies' activeClassName={classes['nav-link']}>
-          <div>
+          <div className={classes['nav-item']}>
             <TvSvg fill={fill} />
             <p className={fontColor}>TV</p>
           </div>
         </NavLink>
         <NavLink to='/cinemania' activeClassName={classes['nav-link']}>
-          <div>
+          <div className={classes['nav-item']}>
             <TvShowsSvg fill={fill} />
             <p className={fontColor}>CINEMANIA</p>
           </div>
         </NavLink>
         <NavLink to='/tvshows' activeClassName={classes['nav-link']}>
-          <div>
+          <div className={classes['nav-item']}>
             <CinemaSvg fill={fill} />
             <p className={fontColor}>TV SHOWS</p>
           </div>

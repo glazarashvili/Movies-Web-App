@@ -84,7 +84,7 @@
 }
 
 .after-scroll {
-  color: #000;
+  color: #2f83c6;
 }
 
 @media (max-width: 1200px) {
@@ -99,5 +99,4 @@
 
 .nav-link {
   text-decoration: none;
-  filter: invert(27%) sepia(20%) saturate(2878%) brightness(104%) contrast(97%);
 }

@@ -9,7 +9,7 @@ import ArrowBack from '../SVG/ArrowBack'
 import ArrowForward from '../SVG/ArrowForward'
 
 const MainLayout = () => {
-  const [posterIndex, setPosterIndex] = React.useState(0)
+  const [, setPosterIndex] = React.useState(0)
   const [layoutMovies, setLayoutMovies] = React.useState([])
 
   const randomPicIndex = Math.floor(Math.random() * 7)

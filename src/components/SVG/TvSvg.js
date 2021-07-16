@@ -3,7 +3,6 @@ import React from 'react'
 const TvSvg = ({ fill }) => {
   return (
     <svg
-      class='svg-icon svg-icon--tv'
       width='31'
       height='24'
       viewBox='0 0 31 24'

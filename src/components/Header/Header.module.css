@@ -28,11 +28,11 @@
 }
 
 .heading {
-  font-family: 'Homemade Apple', cursive;
   color: #fff;
   font-size: 28px;
   cursor: pointer;
   animation: moveInLeft 0.5s ease-out;
+  font-family: 'Faster One', cursive;
 }
 
 .header-bar img {
@@ -71,9 +71,20 @@
 }
 
 .header-navigation p {
+  font-size: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.before-scroll {
   color: #fff;
-  font-size: 12px;
-  margin-top: 5px;
+}
+
+.after-scroll {
+  color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -84,10 +95,6 @@
   .heading {
     font-size: 24px;
   }
-}
-
-.filter:hover {
-  filter: invert(27%) sepia(20%) saturate(2878%) brightness(104%) contrast(97%);
 }
 
 .nav-link {

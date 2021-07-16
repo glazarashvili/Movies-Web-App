@@ -6,8 +6,9 @@ import classes from './Header.module.css'
 
 import TvSvg from '../SVG/TvSvg'
 import MovieSvg from '../SVG/MovieSvg'
-import TvShowsSvg from '../SVG/TvShowsSvg'
 import CinemaSvg from '../SVG/CinemaSvg'
+import TvShowsSvg from '../SVG/TvShowsSvg'
+import Template from '../../ui/Template'
 
 const Header = () => {
   const [offset, setOffset] = React.useState(0)
@@ -20,12 +21,9 @@ const Header = () => {
   const location = useLocation()
 
   const check = offset < 80 && location.pathname === '/home'
-
-  const bgColor = check ? 'transparent' : 'white'
   const fill = check ? 'white' : 'black'
+  const bgColor = check ? 'transparent' : 'white'
   const fontColor = check ? classes['before-scroll'] : classes['after-scroll']
-
-  // #2F83C6
 
   return (
     <div

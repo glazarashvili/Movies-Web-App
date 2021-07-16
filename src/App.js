@@ -9,12 +9,6 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 const App = () => {
-  // React.useEffect(() => {
-  //   axios
-  //     .get(`http://www.omdbapi.com/?apikey=31790adb&t=${movie}`)
-  //     .then(response => console.log(response))
-  // }, [movie])
-
   return (
     <Router>
       <Header />

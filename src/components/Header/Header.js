@@ -8,7 +8,6 @@ import TvSvg from '../SVG/TvSvg'
 import MovieSvg from '../SVG/MovieSvg'
 import CinemaSvg from '../SVG/CinemaSvg'
 import TvShowsSvg from '../SVG/TvShowsSvg'
-import Template from '../../ui/Template'
 
 const Header = () => {
   const [offset, setOffset] = React.useState(0)

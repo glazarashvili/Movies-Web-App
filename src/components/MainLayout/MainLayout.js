@@ -9,25 +9,17 @@ import ArrowBack from '../SVG/ArrowBack'
 import ArrowForward from '../SVG/ArrowForward'
 
 const MainLayout = () => {
-  const [, setPosterIndex] = React.useState(0)
+  const [posterIndex, setPosterIndex] = React.useState(0)
   const [layoutMovies, setLayoutMovies] = React.useState([])
 
-  const randomPicIndex = Math.floor(Math.random() * 7)
-
   const nextButtonClicked = () => {
-    if (randomPicIndex > 7) {
-      setPosterIndex(0)
-    } else {
-      setPosterIndex(prevState => prevState + 1)
-    }
+    // if() {
+    //   setPosterIndex(prevState => prevState + 1)
+    // }
   }
 
   const prevButtonClicked = () => {
-    if (randomPicIndex < 0) {
-      setPosterIndex(7)
-    } else {
-      setPosterIndex(prevState => prevState - 1)
-    }
+    setPosterIndex(prevState => prevState + 1)
   }
 
   React.useEffect(() => {
@@ -37,8 +29,8 @@ const MainLayout = () => {
     fetchAPI()
   }, [])
 
-  const imageSrc = layoutMovies[randomPicIndex]?.poster
-  const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${imageSrc}) no-repeat center center/cover`
+  const layoutPoster = layoutMovies.slice(0, 3)[posterIndex]?.poster
+  const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${layoutPoster}) no-repeat center center/cover`
 
   return (
     <div className={classes.layout}>

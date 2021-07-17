@@ -3,7 +3,6 @@ import React from 'react'
 import classes from './SearchInput.module.css'
 
 const SearchInput = ({ onFocus, zIndex }) => {
-  console.log('searchinput')
   return (
     <input
       placeholder='Search...'

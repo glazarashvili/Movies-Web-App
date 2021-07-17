@@ -30,6 +30,8 @@ const Movies = () => {
     return <Loading />
   }
 
+  console.log('movies', movies)
+
   return (
     <div className={classes['movies-menu']}>
       {movies.length &&

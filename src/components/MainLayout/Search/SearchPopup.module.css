@@ -5,7 +5,7 @@
 }
 
 .fade-animation {
-  animation: animate 0.3s linear;
+  animation: animate 0.4s linear;
 }
 
 @keyframes animate {

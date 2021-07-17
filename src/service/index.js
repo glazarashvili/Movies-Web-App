@@ -32,7 +32,7 @@ export const fetchMovies = async () => {
     ranking: item.vote_average,
     poster: posterUrl + item?.backdrop_path,
   }))
-  // console.log('data', modifiedData)
+  console.log('data', modifiedData)
 
   return modifiedData
 }

@@ -15,7 +15,7 @@ export const fetchMovies = async () => {
     method: 'get',
     url: `${url}/movie/now_playing/?api_key=${apiKey}`,
     params: {
-      page: Math.floor(Math.random() * 7) + 1,
+      page: Math.floor(Math.random() * 4) + 1,
     },
   }).then(response => {
     return response

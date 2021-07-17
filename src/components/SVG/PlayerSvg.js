@@ -6,7 +6,7 @@ const PlayerSvg = ({ className }) => {
       className={className}
       width='66'
       height='66'
-      stroke-width='2'
+      strokeWidth='2'
       viewBox='0 0 66 66'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'>

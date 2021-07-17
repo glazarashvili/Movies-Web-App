@@ -12,14 +12,24 @@ const MainLayout = () => {
   const [posterIndex, setPosterIndex] = React.useState(0)
   const [layoutMovies, setLayoutMovies] = React.useState([])
 
+  console.log(posterIndex)
+
   const nextButtonClicked = () => {
-    // if() {
-    //   setPosterIndex(prevState => prevState + 1)
-    // }
+    console.log(posterIndex)
+    if (posterIndex > 3) {
+      setPosterIndex(0)
+    } else {
+      setPosterIndex(prevState => prevState + 1)
+    }
   }
 
   const prevButtonClicked = () => {
-    setPosterIndex(prevState => prevState + 1)
+    console.log(posterIndex)
+    if (posterIndex < 1) {
+      setPosterIndex(4)
+    } else {
+      setPosterIndex(prevState => prevState - 1)
+    }
   }
 
   React.useEffect(() => {
@@ -29,8 +39,10 @@ const MainLayout = () => {
     fetchAPI()
   }, [])
 
-  const layoutPoster = layoutMovies.slice(0, 3)[posterIndex]?.poster
+  const layoutPoster = layoutMovies.slice(0, 5)[posterIndex]?.poster
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${layoutPoster}) no-repeat center center/cover`
+
+  console.log('laymovies', layoutMovies.slice(0, 3))
 
   return (
     <div className={classes.layout}>

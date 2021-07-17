@@ -15,7 +15,7 @@ const TvSvg = ({ fill }) => {
         height='19.9083'
         rx='3.25'
         stroke={fill}
-        stroke-width='1.5'></rect>
+        strokeWidth='1.5'></rect>
       <path
         d='M15.1671 7H9.5V8.21563H11.5547V15H13.024V8.21563H15.0124L15.1671 7Z'
         fill={fill}></path>

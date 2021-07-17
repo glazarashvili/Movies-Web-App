@@ -7,16 +7,6 @@
   width: 100%;
 }
 
-@keyframes animate {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
 .backdrop {
   position: fixed;
   top: 0;

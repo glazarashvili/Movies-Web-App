@@ -4,9 +4,9 @@ import classes from './MainLayout.module.css'
 
 import { fetchMovies } from '../../service'
 
-import Search from './Search/Search'
 import ArrowBack from '../SVG/ArrowBack'
 import ArrowForward from '../SVG/ArrowForward'
+import SliderContent from './SliderContent/SliderContent'
 
 const MainLayout = () => {
   const [posterIndex, setPosterIndex] = React.useState(0)
@@ -40,6 +40,7 @@ const MainLayout = () => {
   }, [])
 
   const layoutPoster = layoutMovies.slice(0, 5)[posterIndex]?.poster
+  const movieTitle = layoutMovies.slice(0, 5)[posterIndex]?.title
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${layoutPoster}) no-repeat center center/cover`
 
   console.log('laymovies', layoutMovies.slice(0, 3))
@@ -61,7 +62,7 @@ const MainLayout = () => {
           buttonClickHandler={nextButtonClicked}
         />
       </div>
-      <Search />
+      <SliderContent movieTitle={movieTitle} />
     </div>
   )
 }

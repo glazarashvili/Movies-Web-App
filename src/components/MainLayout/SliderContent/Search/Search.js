@@ -2,7 +2,7 @@ import React from 'react'
 
 import SearchPopup from './SearchPopup'
 import SearchInput from './SearchInput'
-import SearchIcon from '../../SVG/SearchIcon'
+import SearchIcon from '../../../SVG/SearchIcon'
 
 import classes from './Search.module.css'
 

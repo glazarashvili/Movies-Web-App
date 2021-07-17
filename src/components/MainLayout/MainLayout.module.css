@@ -8,16 +8,16 @@
 
 .arrowBack {
   position: absolute;
-  top: 0;
+  top: calc(50% - 60px);
   left: 50px;
-  transform: translateY(100%);
+  cursor: pointer;
 }
 
 .arrowForward {
   position: absolute;
-  top: 0;
+  top: calc(50% - 60px);
   right: 50px;
-  transform: translateY(100%);
+  cursor: pointer;
 }
 
 .index {

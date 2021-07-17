@@ -10,7 +10,7 @@
 .slider-text-content {
   display: flex;
   align-items: center;
-  min-height: 100px;
+  min-height: 70px;
   width: 100%;
   justify-content: space-around;
   padding: 0 180px;

@@ -9,26 +9,26 @@ import ArrowForward from '../SVG/ArrowForward'
 import SliderContent from './SliderContent/SliderContent'
 
 const MainLayout = () => {
-  const [posterIndex, setPosterIndex] = React.useState(0)
+  const [movieIndex, setMovieIndex] = React.useState(0)
   const [layoutMovies, setLayoutMovies] = React.useState([])
 
-  console.log(posterIndex)
+  console.log(movieIndex)
 
   const nextButtonClicked = () => {
-    console.log(posterIndex)
-    if (posterIndex > 3) {
-      setPosterIndex(0)
+    console.log(movieIndex)
+    if (movieIndex > 3) {
+      setMovieIndex(0)
     } else {
-      setPosterIndex(prevState => prevState + 1)
+      setMovieIndex(prevState => prevState + 1)
     }
   }
 
   const prevButtonClicked = () => {
-    console.log(posterIndex)
-    if (posterIndex < 1) {
-      setPosterIndex(4)
+    console.log(movieIndex)
+    if (movieIndex < 1) {
+      setMovieIndex(4)
     } else {
-      setPosterIndex(prevState => prevState - 1)
+      setMovieIndex(prevState => prevState - 1)
     }
   }
 
@@ -39,8 +39,8 @@ const MainLayout = () => {
     fetchAPI()
   }, [])
 
-  const layoutPoster = layoutMovies.slice(0, 5)[posterIndex]?.poster
-  const movieTitle = layoutMovies.slice(0, 5)[posterIndex]?.title
+  const layoutPoster = layoutMovies.slice(0, 5)[movieIndex]?.poster
+  const movieTitle = layoutMovies.slice(0, 5)[movieIndex]?.title
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${layoutPoster}) no-repeat center center/cover`
 
   console.log('laymovies', layoutMovies.slice(0, 3))

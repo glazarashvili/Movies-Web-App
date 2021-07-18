@@ -8,7 +8,7 @@ import ArrowBack from '../SVG/ArrowBack'
 import ArrowForward from '../SVG/ArrowForward'
 import SliderContent from './SliderContent/SliderContent'
 
-const dots = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]
+const dots = [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
 
 const MainLayout = () => {
   const [movieIndex, setMovieIndex] = React.useState(0)
@@ -22,7 +22,6 @@ const MainLayout = () => {
   }, [])
 
   const nextButtonClicked = () => {
-    console.log(movieIndex)
     if (movieIndex > 3) {
       setMovieIndex(0)
     } else {
@@ -45,17 +44,17 @@ const MainLayout = () => {
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${layoutPoster}) no-repeat center center/cover`
 
   const dotsContainer = (
-    <section className>
+    <div className={classes['dots-container']}>
       {dots.map(dot => {
         return (
-          <p
+          <div
             id={dot.id}
             className={
-              dot.id === movieIndex + 1 ? classes.color : classes.dot
-            }></p>
+              dot.id === movieIndex ? classes['active-dot'] : classes.dot
+            }></div>
         )
       })}
-    </section>
+    </div>
   )
 
   return (

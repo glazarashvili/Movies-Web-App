@@ -1,14 +1,19 @@
-.header-bar {
+.header {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   position: fixed;
-  padding: 10px 250px;
+  padding: 10px 0px;
   top: 0;
   left: 0;
   background: transparent;
   z-index: 300;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
 }
 
 @keyframes moveInLeft {

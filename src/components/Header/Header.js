@@ -26,37 +26,39 @@ const Header = () => {
 
   return (
     <div
-      className={classes['header-bar']}
+      className={classes.header}
       style={{ background: bgColor, transition: 'background 0.3s linear' }}>
-      <Link to='/home'>
-        <h1 className={`${classes.heading} ${fontColor}`}>MovieDB</h1>
-      </Link>
-      <nav className={classes['header-navigation']}>
-        <NavLink activeClassName={classes['nav-link']} to='/tv'>
-          <div className={classes['nav-item']}>
-            <MovieSvg fill={fill} />
-            <p className={fontColor}>MOVIES</p>
-          </div>
-        </NavLink>
-        <NavLink to='/movies' activeClassName={classes['nav-link']}>
-          <div className={classes['nav-item']}>
-            <TvSvg fill={fill} />
-            <p className={fontColor}>TV</p>
-          </div>
-        </NavLink>
-        <NavLink to='/cinemania' activeClassName={classes['nav-link']}>
-          <div className={classes['nav-item']}>
-            <TvShowsSvg fill={fill} />
-            <p className={fontColor}>CINEMANIA</p>
-          </div>
-        </NavLink>
-        <NavLink to='/tvshows' activeClassName={classes['nav-link']}>
-          <div className={classes['nav-item']}>
-            <CinemaSvg fill={fill} />
-            <p className={fontColor}>TV SHOWS</p>
-          </div>
-        </NavLink>
-      </nav>
+      <div className={classes['header-bar']}>
+        <Link to='/home'>
+          <h1 className={`${classes.heading} ${fontColor}`}>MovieDB</h1>
+        </Link>
+        <nav className={classes['header-navigation']}>
+          <NavLink activeClassName={classes['nav-link']} to='/tv'>
+            <div className={classes['nav-item']}>
+              <MovieSvg fill={fill} />
+              <p className={fontColor}>MOVIES</p>
+            </div>
+          </NavLink>
+          <NavLink to='/movies' activeClassName={classes['nav-link']}>
+            <div className={classes['nav-item']}>
+              <TvSvg fill={fill} />
+              <p className={fontColor}>TV</p>
+            </div>
+          </NavLink>
+          <NavLink to='/cinemania' activeClassName={classes['nav-link']}>
+            <div className={classes['nav-item']}>
+              <TvShowsSvg fill={fill} />
+              <p className={fontColor}>CINEMANIA</p>
+            </div>
+          </NavLink>
+          <NavLink to='/tvshows' activeClassName={classes['nav-link']}>
+            <div className={classes['nav-item']}>
+              <CinemaSvg fill={fill} />
+              <p className={fontColor}>TV SHOWS</p>
+            </div>
+          </NavLink>
+        </nav>
+      </div>
     </div>
   )
 }

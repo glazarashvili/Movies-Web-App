@@ -11,9 +11,8 @@
   display: flex;
   align-items: center;
   min-height: 70px;
-  width: 100%;
-  justify-content: space-around;
-  padding: 0 180px;
+  width: 50%;
+  justify-content: space-between;
 }
 
 .movie-title {

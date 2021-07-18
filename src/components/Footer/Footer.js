@@ -15,7 +15,7 @@ const Footer = () => {
         <img className={classes['footer-img']} src={igSvg} alt='ig logo' />
       </div>
       <p className={classes.content}>
-        2021 © Design by <span>GL</span>
+        2021 © DESIGN By <span>GL</span>
       </p>
     </footer>
   )

@@ -8,11 +8,18 @@ import ArrowBack from '../SVG/ArrowBack'
 import ArrowForward from '../SVG/ArrowForward'
 import SliderContent from './SliderContent/SliderContent'
 
+const dots = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]
+
 const MainLayout = () => {
   const [movieIndex, setMovieIndex] = React.useState(0)
   const [layoutMovies, setLayoutMovies] = React.useState([])
 
-  console.log(movieIndex)
+  React.useEffect(() => {
+    const fetchAPI = async () => {
+      setLayoutMovies(await fetchMovies())
+    }
+    fetchAPI()
+  }, [])
 
   const nextButtonClicked = () => {
     console.log(movieIndex)
@@ -32,18 +39,24 @@ const MainLayout = () => {
     }
   }
 
-  React.useEffect(() => {
-    const fetchAPI = async () => {
-      setLayoutMovies(await fetchMovies())
-    }
-    fetchAPI()
-  }, [])
-
-  const layoutPoster = layoutMovies.slice(0, 5)[movieIndex]?.poster
-  const movieTitle = layoutMovies.slice(0, 5)[movieIndex]?.title
+  const movie = layoutMovies.slice(0, 5)[movieIndex]
+  const layoutPoster = movie?.poster
+  const movieTitle = movie?.title
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${layoutPoster}) no-repeat center center/cover`
 
-  console.log('laymovies', layoutMovies.slice(0, 3))
+  const dotsContainer = (
+    <section className>
+      {dots.map(dot => {
+        return (
+          <p
+            id={dot.id}
+            className={
+              dot.id === movieIndex + 1 ? classes.color : classes.dot
+            }></p>
+        )
+      })}
+    </section>
+  )
 
   return (
     <div className={classes.layout}>
@@ -62,7 +75,7 @@ const MainLayout = () => {
           buttonClickHandler={nextButtonClicked}
         />
       </div>
-      <SliderContent movieTitle={movieTitle} />
+      <SliderContent movieTitle={movieTitle} children={dotsContainer} />
     </div>
   )
 }

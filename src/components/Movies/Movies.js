@@ -40,9 +40,9 @@ const Movies = () => {
               desc={movie.desc}
               image={movie.image}
               title={movie.title}
-              language={movie.language}
-              date={movie.release_date}
               ranking={movie.ranking}
+              date={movie.release_date}
+              language={movie.language}
               leftPosition={classes['left-position']}
               rightPosition={classes['right-position']}
             />

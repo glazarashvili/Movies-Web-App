@@ -33,13 +33,13 @@ const Header = () => {
           <h1 className={`${classes.heading} ${fontColor}`}>MovieDB</h1>
         </Link>
         <nav className={classes['header-navigation']}>
-          <NavLink activeClassName={classes['nav-link']} to='/tv'>
+          <NavLink activeClassName={classes['nav-link']} to='/movies'>
             <div className={classes['nav-item']}>
               <MovieSvg fill={fill} />
               <p className={fontColor}>MOVIES</p>
             </div>
           </NavLink>
-          <NavLink to='/movies' activeClassName={classes['nav-link']}>
+          <NavLink to='/tv' activeClassName={classes['nav-link']}>
             <div className={classes['nav-item']}>
               <TvSvg fill={fill} />
               <p className={fontColor}>TV</p>

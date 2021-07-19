@@ -3,7 +3,7 @@ import React from 'react'
 import Movies from '../components/Movies/Movies'
 import MainLayout from '../components/MainLayout/MainLayout'
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <React.Fragment>
       <MainLayout />
@@ -11,5 +11,3 @@ const HomePage = () => {
     </React.Fragment>
   )
 }
-
-export default HomePage

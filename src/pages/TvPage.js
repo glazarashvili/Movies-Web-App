@@ -1,7 +1,7 @@
 import React from 'react'
 
-const TvPage = () => {
+export const TvPage = () => {
   return <div style={{ marginTop: '94px' }}>TV Page</div>
 }
 
-export default TvPage
+// export default TvPage

@@ -2,36 +2,32 @@ import React from 'react'
 
 import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom'
 
-import TvPage from './pages/TvPage'
-import HomePage from './pages/HomePage'
-import MoviesPage from './pages/MoviesPage'
-import TvShowsPage from './pages/TvShowsPage'
+import { AppRoutes as routes } from './routes/app-routes'
+
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import CinemaniaPage from './pages/CinemaniaPage'
+
+import * as views from './pages'
 
 const App = () => {
+  console.log(views, 'views')
   return (
     <Router>
       <Header />
       <Route path='/' exact>
         <Redirect to='home' />
       </Route>
-      <Route path='/home' exact>
-        <HomePage />
-      </Route>
-      <Route path='/movies' exact>
-        <MoviesPage />
-      </Route>
-      <Route path='/tvshows'>
-        <TvShowsPage />
-      </Route>
-      <Route path='/tv'>
-        <TvPage />
-      </Route>
-      <Route path='/cinemania'>
-        <CinemaniaPage />
-      </Route>
+      {routes.map(route => {
+        const Component = views[route.component]
+        return (
+          <Route
+            key={route.component}
+            path={`/${route.path}`}
+            component={Component}
+            exact={route.exact}
+          />
+        )
+      })}
       <Footer />
     </Router>
   )

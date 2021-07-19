@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CinemaniaPage = () => {
+export const CinemaniaPage = () => {
   return <div style={{ marginTop: '94px' }}>Cinemania Page</div>
 }
 

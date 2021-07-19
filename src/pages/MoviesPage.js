@@ -1,7 +1,7 @@
 import React from 'react'
 import Movies from '../components/Movies/Movies'
 
-const MoviesPage = () => {
+export const MoviesPage = () => {
   return (
     <div style={{ marginTop: '94px' }}>
       <Movies />
@@ -9,4 +9,4 @@ const MoviesPage = () => {
   )
 }
 
-export default MoviesPage
+// export default MoviesPage

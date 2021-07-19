@@ -21,7 +21,7 @@ export const fetchMovies = async () => {
     return response
   })
 
-  console.log(data.results)
+  // console.log(data.results)
   const modifiedData = data.results.map(item => ({
     id: item.id,
     title: item.title,
@@ -32,7 +32,7 @@ export const fetchMovies = async () => {
     ranking: item.vote_average,
     poster: posterUrl + item?.backdrop_path,
   }))
-  console.log('data', modifiedData)
+  // console.log('data', modifiedData)
 
   return modifiedData
 }

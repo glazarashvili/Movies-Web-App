@@ -30,7 +30,6 @@ const MainLayout = () => {
   }
 
   const prevButtonClicked = () => {
-    console.log(movieIndex)
     if (movieIndex < 1) {
       setMovieIndex(4)
     } else {
@@ -48,7 +47,7 @@ const MainLayout = () => {
       {dots.map(dot => {
         return (
           <div
-            id={dot.id}
+            key={dot.id}
             className={
               dot.id === movieIndex ? classes['active-dot'] : classes.dot
             }></div>

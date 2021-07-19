@@ -6,10 +6,10 @@ const SearchPopup = ({ className, popupShown }) => {
   const overlayRef = useRef(null)
 
   useEffect(() => {
-    console.log(overlayRef.current, 'current')
+    // console.log(overlayRef.current, 'current')
   }, [])
 
-  const popupWidth = window.innerWidth / 2 + 20
+  const popupWidth = window.innerWidth / 2
 
   return (
     <React.Fragment>

@@ -20,7 +20,7 @@ const App = () => {
       <Route path='/home' exact>
         <HomePage />
       </Route>
-      <Route path='/movies'>
+      <Route path='/movies' exact>
         <MoviesPage />
       </Route>
       <Route path='/tvshows'>

@@ -47,6 +47,7 @@ const MainLayout = () => {
       {dots.map(dot => {
         return (
           <div
+            onClick={() => setMovieIndex(dot.id)}
             key={dot.id}
             className={
               dot.id === movieIndex ? classes['active-dot'] : classes.dot

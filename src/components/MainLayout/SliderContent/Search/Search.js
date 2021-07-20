@@ -1,28 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import SearchPopup from './SearchPopup'
 import SearchInput from './SearchInput'
 import SearchIcon from '../../../SVG/SearchIcon'
 
 import classes from './Search.module.css'
+import {useDelayUnmount} from "../../../../hooks/useDelayUnmount";
 
 const Search = () => {
-  const [popupShown, setPopupShown] = React.useState(false)
+  const [isMounted, setIsMounted] = React.useState(false)
+
+  const shouldRenderChild = useDelayUnmount(isMounted, 400);
 
   return (
     <div className={classes['search-bar']}>
       <SearchInput
-        zIndex={popupShown ? 2000 : 0}
-        onFocus={() => setPopupShown(true)}
+        zIndex={isMounted ? 2000 : 0}
+        onFocus={() => setIsMounted(true)}
       />
       <SearchIcon
-        zIndex={popupShown ? 2000 : 0}
-        onSearchIconClick={() => setPopupShown(true)}
+        zIndex={isMounted ? 2000 : 0}
+        onSearchIconClick={() => setIsMounted(true)}
       />
-      {popupShown && (
+      {shouldRenderChild && (
         <SearchPopup
-          className={classes.backdrop}
-          popupShown={() => setPopupShown(false)}
+          className={`${classes.backdrop}`}
+          animationClass={`${isMounted ? classes['fade-animation'] : classes['hide-animation']}`}
+          popupShown={() => {
+            setIsMounted(false)
+          }}
         />
       )}
     </div>

@@ -14,3 +14,21 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
 }
+
+.fade-animation {
+  animation: show_anim 400ms ease-in;
+}
+
+.hide-animation {
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+}
+
+@keyframes show_anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -9,7 +9,7 @@
 
 .movie-item:hover .popup {
   display: block;
-  animation: show 0.3s linear;
+  animation: show 0.2s linear;
 }
 
 .movie-item:hover .background {
@@ -19,9 +19,11 @@
 @keyframes show {
   from {
     opacity: 0;
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 

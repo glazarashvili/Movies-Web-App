@@ -10,6 +10,11 @@ export const AppRoutes = [
     exact: true,
   },
   {
+    path: 'movies/:movieId',
+    component: 'MovieDetail',
+    exact: false,
+  },
+  {
     path: 'tvshows',
     component: 'TvShowsPage',
     exact: false,

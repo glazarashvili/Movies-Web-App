@@ -40,6 +40,7 @@ const Movies = ({ func, moviesType }) => {
                 desc={movie.desc}
                 image={movie.image}
                 title={movie.title}
+                movieId={movie.id}
                 ranking={movie?.ranking}
                 date={movie.release_date}
                 language={movie.language}

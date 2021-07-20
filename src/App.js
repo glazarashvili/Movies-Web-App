@@ -20,10 +20,10 @@ const App = () => {
         const Component = views[route.component]
         return (
           <Route
-            key={route.component}
-            path={`/${route.path}`}
-            component={Component}
             exact={route.exact}
+            key={route.component}
+            component={Component}
+            path={`/${route.path}`}
           />
         )
       })}

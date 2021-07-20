@@ -8,6 +8,19 @@
   animation: animate 0.4s linear;
 }
 
+.hide-animation {
+  animation: close-animation 0.4s linear;
+}
+
+@keyframes close-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes animate {
   from {
     opacity: 0;

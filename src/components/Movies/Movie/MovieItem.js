@@ -11,6 +11,7 @@ const MovieItem = ({
   desc,
   title,
   image,
+  movieId,
   ranking,
   language,
   leftPosition,
@@ -33,7 +34,7 @@ const MovieItem = ({
   }, [offset])
 
   return (
-    <Link to='/movies/:id'>
+    <Link to={`/movies/:${movieId}`}>
       <div ref={refContainer}>
         <div className={classes['movie-item']}>
           <img className={classes.poster} src={image} alt='poster' />

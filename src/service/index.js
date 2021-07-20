@@ -82,11 +82,12 @@ export const fetchTopRatedMovies = async () => {
     image: posterUrl + item?.poster_path,
     language: item.original_language,
     desc: item.overview,
+    genre_ids: item.genre_ids,
     release_date: item.release_date,
     ranking: item.vote_average,
     poster: posterUrl + item?.backdrop_path,
   }))
-  // console.log('data', modifiedData)
+  console.log('data', modifiedData)
 
   return modifiedData
 }

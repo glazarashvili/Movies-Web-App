@@ -34,7 +34,7 @@ const Movies = ({ func, moviesType }) => {
       <div className={classes['movies-type']}>{moviesType}</div>
       <div className={classes['movies-menu']}>
         {movies.length &&
-          movies.map(movie => {
+          movies.slice(0, 15).map(movie => {
             return (
               <MovieItem
                 key={movie.id}

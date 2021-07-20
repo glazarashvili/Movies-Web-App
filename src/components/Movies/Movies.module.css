@@ -49,10 +49,18 @@
   }
 }
 
+@media (max-width: 900px) {
+  .movies-menu {
+    grid-template-columns: repeat(2, 180px);
+  }
+}
+
 .movies-type {
   display: flex;
   justify-content: center;
   margin-top: 25px;
   font-size: 20px;
+  color: #0096c7;
   text-transform: uppercase;
+  font-weight: bold;
 }

@@ -24,7 +24,7 @@ const MovieItem = ({
       ? leftPosition
       : refContainer?.current?.offsetLeft + 700 > window.innerWidth
       ? rightPosition
-      : refContainer?.current?.offsetLeft - 1000 < 0
+      : refContainer?.current?.offsetLeft - 1300 < 0
       ? leftPosition
       : leftPosition
 

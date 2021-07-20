@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './MainLayout.module.css'
 
-import { fetchMovies } from '../../service'
+import { fetchOnGoingMovies } from '../../service'
 
 import ArrowBack from '../SVG/ArrowBack'
 import ArrowForward from '../SVG/ArrowForward'
@@ -16,7 +16,7 @@ const MainLayout = () => {
 
   React.useEffect(() => {
     const fetchAPI = async () => {
-      setLayoutMovies(await fetchMovies())
+      setLayoutMovies(await fetchOnGoingMovies())
     }
     fetchAPI()
   }, [])

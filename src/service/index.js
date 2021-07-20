@@ -10,7 +10,7 @@ const url = 'https://api.themoviedb.org/3'
 // const personUrl = `${url}/trending/person/week`
 const posterUrl = 'https://image.tmdb.org/t/p/original/'
 
-export const fetchMovies = async () => {
+export const fetchOnGoingMovies = async () => {
   const { data } = await axios({
     method: 'get',
     url: `${url}/movie/now_playing/?api_key=${apiKey}`,
@@ -37,8 +37,56 @@ export const fetchMovies = async () => {
   return modifiedData
 }
 
-// export const searchMovie = () => {
-//   axios
-//     .get(`${url}/discover/movie/?api_key=${apiKey}`)
-//     .then(response => console.log('eeees', response))
-// }
+export const fetchPopularMovies = async () => {
+  const { data } = await axios({
+    method: 'get',
+    url: `${url}/movie/popular/?api_key=${apiKey}`,
+    params: {
+      page: Math.floor(Math.random() * 10) + 1,
+    },
+  }).then(response => {
+    return response
+  })
+
+  console.log(data.results)
+  const modifiedData = data.results.map(item => ({
+    id: item.id,
+    title: item.title,
+    image: posterUrl + item?.poster_path,
+    language: item.original_language,
+    desc: item.overview,
+    release_date: item.release_date,
+    ranking: item.vote_average,
+    poster: posterUrl + item?.backdrop_path,
+  }))
+  // console.log('data', modifiedData)
+
+  return modifiedData
+}
+
+export const fetchTopRatedMovies = async () => {
+  const { data } = await axios({
+    method: 'get',
+    url: `${url}/movie/top_rated/?api_key=${apiKey}`,
+    params: {
+      page: Math.floor(Math.random() * 10) + 1,
+    },
+  }).then(response => {
+    return response
+  })
+
+  console.log(data.results)
+  const modifiedData = data.results.map(item => ({
+    id: item.id,
+    title: item.title,
+    image: posterUrl + item?.poster_path,
+    language: item.original_language,
+    desc: item.overview,
+    release_date: item.release_date,
+    ranking: item.vote_average,
+    poster: posterUrl + item?.backdrop_path,
+  }))
+  // console.log('data', modifiedData)
+
+  return modifiedData
+}

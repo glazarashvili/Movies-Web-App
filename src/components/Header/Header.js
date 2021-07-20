@@ -11,13 +11,20 @@ import TvShowsSvg from '../SVG/TvShowsSvg'
 
 const Header = () => {
   const [offset, setOffset] = React.useState(0)
-  React.useEffect(() => {
-    window.onscroll = () => {
-      setOffset(window.pageYOffset)
-    }
-  }, [])
 
   const location = useLocation()
+
+  React.useEffect(() => {
+    if (location.pathname === '/home') {
+      window.onscroll = () => {
+        setOffset(window.pageYOffset)
+      }
+    } else {
+      setOffset(0)
+    }
+  }, [location.pathname])
+
+  console.log('.....')
 
   const check = offset < 80 && location.pathname === '/home'
   const fill = check ? '#fff' : '#495057'
@@ -33,25 +40,25 @@ const Header = () => {
           <h1 className={`${classes.heading} ${fontColor}`}>MovieDB</h1>
         </Link>
         <nav className={classes['header-navigation']}>
-          <NavLink activeClassName={classes['nav-link']} to='/movies'>
+          <NavLink to='/movies'>
             <div className={classes['nav-item']}>
               <MovieSvg fill={fill} />
               <p className={fontColor}>MOVIES</p>
             </div>
           </NavLink>
-          <NavLink to='/tv' activeClassName={classes['nav-link']}>
+          <NavLink to='/tv'>
             <div className={classes['nav-item']}>
               <TvSvg fill={fill} />
               <p className={fontColor}>TV</p>
             </div>
           </NavLink>
-          <NavLink to='/cinemania' activeClassName={classes['nav-link']}>
+          <NavLink to='/cinemania'>
             <div className={classes['nav-item']}>
               <TvShowsSvg fill={fill} />
               <p className={fontColor}>CINEMANIA</p>
             </div>
           </NavLink>
-          <NavLink to='/tvshows' activeClassName={classes['nav-link']}>
+          <NavLink to='/tvshows'>
             <div className={classes['nav-item']}>
               <CinemaSvg fill={fill} />
               <p className={fontColor}>TV SHOWS</p>

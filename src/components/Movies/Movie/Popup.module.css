@@ -1,0 +1,87 @@
+.popup {
+  position: absolute;
+  padding: 20px;
+  width: 300px;
+  height: 270px;
+  top: 0;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+  display: none;
+  cursor: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+@media (min-width: 1600px) {
+  .popup {
+    min-width: 370px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .popup {
+    width: 290px;
+  }
+}
+
+.heading {
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 16px;
+  color: rgba(0, 135, 255, 1);
+  max-width: 170px;
+}
+
+.language {
+  font-size: 16px;
+  color: rgba(0, 135, 255, 1);
+}
+
+.popup p {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.popup span {
+  color: rgba(0, 135, 255, 1);
+  margin-right: 3px;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranking {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ranking span {
+  border: 1px solid rgba(0, 135, 255, 1);
+  padding: 3px;
+}
+
+.ranking p {
+  padding-top: 10px;
+}

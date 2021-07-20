@@ -1,0 +1,26 @@
+.search-popup {
+  position: absolute;
+  z-index: 10000;
+  top: 98px;
+}
+
+
+
+@keyframes close-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

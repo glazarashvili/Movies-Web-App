@@ -26,7 +26,6 @@ const Movies = ({ func, moviesType }) => {
 
   if (loading) {
     return <Loading />
-  } else {
   }
 
   return (

@@ -24,8 +24,6 @@ const Header = () => {
     }
   }, [location.pathname])
 
-  console.log('.....')
-
   const check = offset < 80 && location.pathname === '/home'
   const fill = check ? '#fff' : '#495057'
   const bgColor = check ? 'transparent' : '#fff'

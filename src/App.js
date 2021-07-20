@@ -10,7 +10,6 @@ import Footer from './components/Footer/Footer'
 import * as views from './pages'
 
 const App = () => {
-  console.log(views, 'views')
   return (
     <Router>
       <Header />

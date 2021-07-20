@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useDelayUnmount } from '../../../../hooks/useDelayUnmount'
 import classes from './SearchPopup.module.css'
 
@@ -16,8 +16,8 @@ const SearchPopup = ({ className, popupShown }) => {
   const [isMounted, setIsMounted] = React.useState(true)
   const shouldRenderChild = useDelayUnmount(isMounted, 500)
 
-  const mountedStyle = { opacity: 1, transition: 'opacity 500ms ease-in' }
-  const unmountedStyle = { opacity: 0, transition: 'opacity 500ms ease-in' }
+  // const mountedStyle = { opacity: 1, transition: 'opacity 500ms ease-in' }
+  // const unmountedStyle = { opacity: 0, transition: 'opacity 500ms ease-in' }
 
   const popupWidth = window.innerWidth / 2
 
@@ -43,7 +43,6 @@ const SearchPopup = ({ className, popupShown }) => {
           className={`${className} ${
             isMounted ? classes['fade-animation'] : classes['hide-animation']
           }`}
-          className={`${className}`}
           ref={overlayRef}></div>
       </React.Fragment>
     )

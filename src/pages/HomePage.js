@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {
-  fetchOnGoingMovies,
+  // fetchOnGoingMovies,
   fetchPopularMovies,
   fetchTopRatedMovies,
 } from '../service/index'

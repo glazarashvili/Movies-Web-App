@@ -7,13 +7,13 @@ import Loading from '../../ui/Loading'
 const Movies = ({ func, moviesType }) => {
   const [movies, setMovies] = React.useState([])
   const [loading, setLoading] = React.useState(false)
-  const [, setWindowWidth] = React.useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
 
   React.useEffect(() => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth)
     })
-  }, [])
+  }, [windowWidth])
 
   React.useEffect(() => {
     setLoading(true)
@@ -24,9 +24,7 @@ const Movies = ({ func, moviesType }) => {
     fetchAPI()
   }, [func])
 
-  if (loading) {
-    return <Loading />
-  }
+  if (loading) return <Loading />
 
   return (
     <section>

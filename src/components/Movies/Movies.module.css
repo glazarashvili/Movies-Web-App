@@ -60,7 +60,7 @@
   justify-content: center;
   margin-top: 25px;
   font-size: 20px;
-  color: #0096c7;
+  color: rgba(0, 135, 255, 1);
   text-transform: uppercase;
   font-weight: bold;
 }

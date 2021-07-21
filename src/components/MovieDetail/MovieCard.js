@@ -2,13 +2,19 @@ import React from 'react'
 
 import classes from './MovieCard.module.css'
 
-const MovieCard = ({ backImage }) => {
-  const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${backImage}) no-repeat center center/cover`
+const MovieCard = ({ poster, movieTitle, ranking }) => {
+  const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${poster}) no-repeat center center/cover`
 
   return (
-    <div
-      className={classes['movie-card']}
-      style={{ background: background }}></div>
+    <div className={classes['movie-card']} style={{ background: background }}>
+      <div className={classes['movie-content']}>
+        <h1 className={classes['movie-title']}>{movieTitle}</h1>
+        <div className={classes['movie-ranking']}>
+          <h1>IMDb</h1>
+          <p>{ranking}</p>
+        </div>
+      </div>
+    </div>
   )
 }
 

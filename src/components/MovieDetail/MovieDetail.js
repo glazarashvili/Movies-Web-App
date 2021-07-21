@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 
 import { url, apiKey, posterUrl } from '../../service/index'
 
-import MovieCard from './MovieInfo/MovieCard'
-import MovieInfo from './MovieInfo/MovieInfo'
+import MovieCard from './MovieCard'
+import MovieInfo from './MovieInfo'
 
 export const MovieDetail = () => {
   const params = useParams()
@@ -26,13 +26,17 @@ export const MovieDetail = () => {
   console.log('thaaat', poster)
 
   return (
-    <div style={{ marginTop: '92px' }}>
+    <div style={{ marginTop: '74px' }}>
       <MovieCard
         backdrop={backdrop}
         movieTitle={movieDetail.title}
         ranking={movieDetail.vote_average}
       />
-      <MovieInfo poster={poster} />
+      <MovieInfo
+        poster={poster}
+        description='lorem loremlorem lorem'
+        country='US'
+      />
     </div>
   )
 }

@@ -1,0 +1,42 @@
+.movie-item {
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: moveInBottom 0.5s ease-out;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.movie-poster {
+  width: 200px;
+  height: 290px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+}
+
+.movie-description {
+  background: #fff;
+  flex: 1;
+  margin-left: 20px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -5,7 +5,7 @@ import { fetchPopularMovies } from '../service/index'
 
 export const MoviesPage = () => {
   return (
-    <div style={{ marginTop: '94px' }}>
+    <div style={{ marginTop: '74px' }}>
       <Movies func={fetchPopularMovies} />
     </div>
   )

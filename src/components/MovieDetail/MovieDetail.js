@@ -4,31 +4,35 @@ import { useParams } from 'react-router-dom'
 
 import { url, apiKey, posterUrl } from '../../service/index'
 
-import MovieCard from './MovieCard'
-
-// import classes from './MovieDetail.module.css'
+import MovieBackdrop from './MovieBackdrop'
+import MovieDescription from './MovieDescription'
 
 export const MovieDetail = () => {
   const params = useParams()
   const [movieDetail, setMovieDetail] = React.useState({})
-
-  const movieUrl = `${url}/movie/${params.movieId.slice(1)}?api_key=${apiKey}`
+  const [poster, setPoster] = React.useState('')
+  const [backdrop, setBackdrop] = React.useState('')
 
   React.useEffect(() => {
-    axios.get(movieUrl).then(response => setMovieDetail(response.data))
-  }, [movieUrl])
+    axios
+      .get(`${url}/movie/${params.movieId}?api_key=${apiKey}`)
+      .then(response => {
+        setMovieDetail(response.data)
+        setBackdrop(posterUrl + response.data.backdrop_path)
+        setPoster(posterUrl + response.data.poster_path)
+      })
+  }, [params.movieId])
 
-  const poster = posterUrl + movieDetail?.backdrop_path
-
-  console.log(movieDetail)
+  console.log('thaaat', poster)
 
   return (
     <div style={{ marginTop: '92px' }}>
-      <MovieCard
-        poster={poster}
+      <MovieBackdrop
+        backdrop={backdrop}
         movieTitle={movieDetail.title}
         ranking={movieDetail.vote_average}
       />
+      <MovieDescription poster={poster} />
     </div>
   )
 }

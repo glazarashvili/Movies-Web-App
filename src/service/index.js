@@ -8,7 +8,7 @@ export const url = 'https://api.themoviedb.org/3'
 // const genreUrl = `${url}/genre/movie/list`
 // export const moviesUrl = `${url}/discover/movie`
 // const personUrl = `${url}/trending/person/week`
-export const posterUrl = 'https://image.tmdb.org/t/p/original/'
+export const posterUrl = 'https://image.tmdb.org/t/p/original'
 
 export const fetchOnGoingMovies = async () => {
   const { data } = await axios({

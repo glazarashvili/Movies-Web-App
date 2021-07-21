@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './MovieCard.module.css'
 
-const MovieBackdrop = ({ backdrop, movieTitle, ranking }) => {
+const MovieCard = ({ backdrop, movieTitle, ranking }) => {
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${backdrop}) no-repeat center center/cover`
 
   return (
@@ -18,4 +18,4 @@ const MovieBackdrop = ({ backdrop, movieTitle, ranking }) => {
   )
 }
 
-export default MovieBackdrop
+export default MovieCard

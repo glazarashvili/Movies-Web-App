@@ -1,8 +1,8 @@
 import React from 'react'
 
-import classes from './MoviePoster.module.css'
+import classes from './MovieInfo.module.css'
 
-const MoviePoster = ({ poster }) => {
+const MovieInfo = ({ poster }) => {
   return (
     <div>
       <img
@@ -14,4 +14,4 @@ const MoviePoster = ({ poster }) => {
   )
 }
 
-export default MoviePoster
+export default MovieInfo

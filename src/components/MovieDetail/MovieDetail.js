@@ -13,6 +13,7 @@ import { url, apiKey, posterUrl } from '../../service/index'
 export const MovieDetail = () => {
   const params = useParams()
   const [info, setInfo] = React.useState({})
+  const [comments, setComment] = React.useState([])
   const [poster, setPoster] = React.useState('')
   const [backdrop, setBackdrop] = React.useState('')
 
@@ -28,7 +29,8 @@ export const MovieDetail = () => {
     axios
       .get(`${url}/movie/${params.movieId}/reviews?api_key=${apiKey}`)
       .then(response => {
-        console.log('reviews', response)
+        setComment(response.data.results)
+        console.log('reviews', response.data.results)
       })
   }, [params.movieId])
 
@@ -78,7 +80,11 @@ export const MovieDetail = () => {
         ranking={info.vote_average}
       />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
-      <Comments />
+      <Comments
+        comms={comments}
+        author={comments.author}
+        comment={comments.comment}
+      />
     </div>
   )
 }

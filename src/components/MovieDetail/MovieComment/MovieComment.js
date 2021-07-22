@@ -10,7 +10,7 @@ import {
 
 import classes from './MovieComment.module.css'
 
-const MovieComment = () => {
+const MovieComment = ({ author, comment }) => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
   const [action, setAction] = useState(null)
@@ -49,20 +49,14 @@ const MovieComment = () => {
     <Comment
       className={classes.comment}
       actions={actions}
-      author={<a>Han Solo</a>}
+      author={<p>{author}</p>}
       avatar={
         <Avatar
           src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
           alt='Han Solo'
         />
       }
-      content={
-        <p className={classes['comment-content']}>
-          We supply a series of design principles, practical patterns and high
-          quality design resources (Sketch and Axure), to help people create
-          their product prototypes beautifully and efficiently.
-        </p>
-      }
+      content={<p className={classes['comment-content']}>{comment}</p>}
       datetime={
         <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
           <span style={{ color: 'rgba(0, 135, 255, 1)' }}>

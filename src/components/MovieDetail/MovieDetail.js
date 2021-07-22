@@ -16,6 +16,7 @@ export const MovieDetail = () => {
   const [comments, setComment] = React.useState([])
   const [poster, setPoster] = React.useState('')
   const [backdrop, setBackdrop] = React.useState('')
+  const [avatar, setAvatar] = React.useState('')
 
   React.useEffect(() => {
     axios
@@ -30,7 +31,17 @@ export const MovieDetail = () => {
       .get(`${url}/movie/${params.movieId}/reviews?api_key=${apiKey}`)
       .then(response => {
         setComment(response.data.results)
-        console.log('reviews', response.data.results)
+        // setAvatar(response.data.results[0].author_details.avatar_path.slice(1))
+        setAvatar(
+          response.data.results.map(
+            result => result.author_details.avatar_path.slice(1)[0]
+          )
+        )
+        console.log(
+          response.data.results.map(result =>
+            result.author_details.avatar_path.slice(1)
+          )
+        )
       })
   }, [params.movieId])
 
@@ -72,6 +83,8 @@ export const MovieDetail = () => {
     { name: 'Popularity', prop: info.popularity },
   ]
 
+  // console.log(comments.author)
+
   return (
     <div className={classes['detail-menu']}>
       <MovieCard
@@ -83,6 +96,7 @@ export const MovieDetail = () => {
       <Comments
         comms={comments}
         author={comments.author}
+        avatar={avatar}
         comment={comments.comment}
       />
     </div>

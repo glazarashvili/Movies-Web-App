@@ -3,7 +3,7 @@ import MovieComment from './MovieComment'
 
 import Wrapper from '../../../ui/Wrapper'
 
-const Comments = ({ comms }) => {
+const Comments = ({ comms, avatar }) => {
   return (
     <Wrapper>
       {comms.map(comm => {
@@ -12,6 +12,7 @@ const Comments = ({ comms }) => {
             key={comm.id}
             author={comm.author}
             comment={comm.content}
+            avatar={avatar}
           />
         )
       })}

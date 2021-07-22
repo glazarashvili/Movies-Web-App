@@ -10,7 +10,7 @@ import {
 
 import classes from './MovieComment.module.css'
 
-const MovieComment = ({ author, comment }) => {
+const MovieComment = ({ author, comment, avatar }) => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
   const [action, setAction] = useState(null)
@@ -50,12 +50,7 @@ const MovieComment = ({ author, comment }) => {
       className={classes.comment}
       actions={actions}
       author={<p>{author}</p>}
-      avatar={
-        <Avatar
-          src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
-          alt='Han Solo'
-        />
-      }
+      avatar={<Avatar src={avatar} alt='Han Solo' />}
       content={<p className={classes['comment-content']}>{comment}</p>}
       datetime={
         <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>

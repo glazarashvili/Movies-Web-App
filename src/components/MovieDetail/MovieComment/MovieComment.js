@@ -8,6 +8,8 @@ import {
   LikeFilled,
 } from '@ant-design/icons'
 
+import classes from './MovieComment.module.css'
+
 const MovieComment = () => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
@@ -29,7 +31,7 @@ const MovieComment = () => {
     <Tooltip key='comment-basic-like' title='Like'>
       <span onClick={like}>
         {createElement(action === 'liked' ? LikeFilled : LikeOutlined)}
-        <span className='comment-action'>{likes}</span>
+        <span className={classes['comment-action']}>{likes}</span>
       </span>
     </Tooltip>,
     <Tooltip key='comment-basic-dislike' title='Dislike'>
@@ -37,7 +39,7 @@ const MovieComment = () => {
         {React.createElement(
           action === 'disliked' ? DislikeFilled : DislikeOutlined
         )}
-        <span className='comment-action'>{dislikes}</span>
+        <span className={classes['comment-action']}>{dislikes}</span>
       </span>
     </Tooltip>,
     <span key='comment-basic-reply-to'>Reply to</span>,
@@ -45,6 +47,7 @@ const MovieComment = () => {
 
   return (
     <Comment
+      className={classes.comment}
       actions={actions}
       author={<a>Han Solo</a>}
       avatar={
@@ -54,7 +57,7 @@ const MovieComment = () => {
         />
       }
       content={
-        <p>
+        <p className={classes['comment-content']}>
           We supply a series of design principles, practical patterns and high
           quality design resources (Sketch and Axure), to help people create
           their product prototypes beautifully and efficiently.
@@ -62,7 +65,9 @@ const MovieComment = () => {
       }
       datetime={
         <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-          <span>{moment().fromNow()}</span>
+          <span style={{ color: 'rgba(0, 135, 255, 1)' }}>
+            {moment().fromNow()}
+          </span>
         </Tooltip>
       }
     />

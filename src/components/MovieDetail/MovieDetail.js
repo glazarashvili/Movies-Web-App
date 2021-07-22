@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 import MovieCard from './MovieCard'
 import MovieInfo from './MovieInfo'
-import Comments from './MovieComment/MovieComment'
+import Comments from './MovieComment/Comments'
 
 import classes from './MovieDetail.module.css'
 

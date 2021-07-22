@@ -12,15 +12,13 @@ const MovieInfo = ({ poster, movieInfo }) => {
           alt='movie-poster'
         />
         <div className={classes['movie-description']}>
-          <ul>
-            {movieInfo.map(movie => {
-              return (
-                <li key={movie.name}>
-                  {movie.name} <p>{movie.prop}</p>
-                </li>
-              )
-            })}
-          </ul>
+          {movieInfo.map(movie => {
+            return (
+              <p key={movie.name} className={classes['list-item']}>
+                {movie.name}: <span>{movie.prop}</span>
+              </p>
+            )
+          })}
         </div>
       </div>
     </div>

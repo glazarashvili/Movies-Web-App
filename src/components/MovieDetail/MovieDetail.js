@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom'
 
 import { url, apiKey, posterUrl } from '../../service/index'
 
+import classes from './MovieDetail.module.css'
+
 import MovieCard from './MovieCard'
 import MovieInfo from './MovieInfo'
 
 export const MovieDetail = () => {
   const params = useParams()
-  const [movieDetail, setMovieDetail] = React.useState({})
+  const [info, setInfo] = React.useState({})
   const [poster, setPoster] = React.useState('')
   const [backdrop, setBackdrop] = React.useState('')
 
@@ -17,46 +19,55 @@ export const MovieDetail = () => {
     axios
       .get(`${url}/movie/${params.movieId}?api_key=${apiKey}`)
       .then(response => {
-        setMovieDetail(response.data)
+        setInfo(response.data)
         setBackdrop(posterUrl + response.data.backdrop_path)
         setPoster(posterUrl + response.data.poster_path)
       })
   }, [params.movieId])
 
   const movieInfo = [
-    { name: 'Title', prop: movieDetail.release_date },
-    { name: 'Release Date', prop: 'release' },
-    { name: 'Country', prop: 'country' },
-    { name: 'Genres', prop: 'genres' },
-    { name: 'Budget', prop: 'budget' },
-    { name: 'Revenue', prop: 'revenue' },
-    { name: 'Description', prop: 'description' },
-    { name: '+18', prop: 'permission' },
-    { name: 'Popularity', prop: 'popularity' },
+    { name: 'Title', prop: info.title },
+    { name: 'Release Date', prop: info.release_date?.slice(0, 4) },
+    {
+      name: 'Country',
+      prop: info.production_countries?.map(item => item.name).join(', '),
+    },
+    {
+      name: 'Production Company',
+      prop: info.production_companies?.map(item => item.name).join(', '),
+    },
+    {
+      name: 'Genres',
+      prop: info.genres?.map(genre => genre.name).join(', '),
+    },
+    {
+      name: 'Budget',
+      prop: info.budget ? `${(info.budget / 1000000).toFixed(1)}. mn.` : 'N/A',
+    },
+    {
+      name: 'Revenue',
+      prop: info.revenue
+        ? `${(info.revenue / 1000000).toFixed(1)}. mn.`
+        : 'N/A',
+    },
+    { name: 'Description', prop: info.overview },
+    {
+      name: 'Adults',
+      prop: info.permission ? 'Not Permitted' : 'Permitted',
+    },
+    { name: 'IMDb', prop: info.vote_average },
+    { name: 'Votes', prop: info.vote_count },
+    { name: 'Popularity', prop: info.popularity },
   ]
 
-  console.log('thaaat', movieDetail)
-
   return (
-    <div style={{ marginTop: '74px' }}>
+    <div className={classes['detail-menu']}>
       <MovieCard
         backdrop={backdrop}
-        movieTitle={movieDetail.title}
-        ranking={movieDetail.vote_average}
+        movieTitle={info.title}
+        ranking={info.vote_average}
       />
-      <MovieInfo
-        poster={poster}
-        movieInfo={movieInfo}
-        // popularity={movieDetail.popularity}
-        // permission={movieDetail.adult}
-        // description={movieDetail.revenue}
-        // country={movieDetail.original_language}
-        // revenue={movieDetail.revenue}
-        // description={movieDetail.overview}
-        // release={movieDetail.release_date}
-        // budget={movieDetail.budget}
-        // genres={movieDetail.genres}
-      />
+      <MovieInfo poster={poster} movieInfo={movieInfo} />
     </div>
   )
 }

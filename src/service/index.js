@@ -91,25 +91,3 @@ export const fetchTopRatedMovies = async () => {
 
   return modifiedData
 }
-
-// export const searchMovie = async () => {
-//   const { data } = axios.get(moviesUrl).then(response => {
-//     return response
-//   })
-
-//   console.log(data.results)
-//   const modifiedData = data.results.map(item => ({
-//     id: item.id,
-//     title: item.title,
-//     image: posterUrl + item?.poster_path,
-//     language: item.original_language,
-//     desc: item.overview,
-//     genre_ids: item.genre_ids,
-//     release_date: item.release_date,
-//     ranking: item.vote_average,
-//     poster: posterUrl + item?.backdrop_path,
-//   }))
-//   console.log('data', modifiedData)
-
-//   return modifiedData
-// }

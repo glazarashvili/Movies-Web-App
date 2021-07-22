@@ -2,14 +2,7 @@ import React from 'react'
 
 import classes from './MovieInfo.module.css'
 
-const MovieInfo = ({
-  poster,
-  release,
-  country,
-  genres,
-  revenue,
-  description,
-}) => {
+const MovieInfo = ({ poster, movieInfo }) => {
   return (
     <div className={classes['movie-item']}>
       <div className={classes['movie-info']}>
@@ -19,21 +12,15 @@ const MovieInfo = ({
           alt='movie-poster'
         />
         <div className={classes['movie-description']}>
-          <p>
-            Release Date <span>{release}</span>
-          </p>
-          <p>
-            Country <span>{country}</span>
-          </p>
-          <p>
-            Genres <span>{genres}</span>
-          </p>
-          <p>
-            Revenue <span>{revenue}</span>
-          </p>
-          <p>
-            Description <span>{description}</span>
-          </p>
+          <ul>
+            {movieInfo.map(movie => {
+              return (
+                <li key={movie.name}>
+                  {movie.name} <p>{movie.prop}</p>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </div>
     </div>

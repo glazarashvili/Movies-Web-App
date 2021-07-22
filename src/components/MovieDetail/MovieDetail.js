@@ -23,7 +23,19 @@ export const MovieDetail = () => {
       })
   }, [params.movieId])
 
-  console.log('thaaat', poster)
+  const movieInfo = [
+    { name: 'Title', prop: movieDetail.release_date },
+    { name: 'Release Date', prop: 'release' },
+    { name: 'Country', prop: 'country' },
+    { name: 'Genres', prop: 'genres' },
+    { name: 'Budget', prop: 'budget' },
+    { name: 'Revenue', prop: 'revenue' },
+    { name: 'Description', prop: 'description' },
+    { name: '+18', prop: 'permission' },
+    { name: 'Popularity', prop: 'popularity' },
+  ]
+
+  console.log('thaaat', movieDetail)
 
   return (
     <div style={{ marginTop: '74px' }}>
@@ -34,8 +46,16 @@ export const MovieDetail = () => {
       />
       <MovieInfo
         poster={poster}
-        description='lorem loremlorem lorem'
-        country='US'
+        movieInfo={movieInfo}
+        // popularity={movieDetail.popularity}
+        // permission={movieDetail.adult}
+        // description={movieDetail.revenue}
+        // country={movieDetail.original_language}
+        // revenue={movieDetail.revenue}
+        // description={movieDetail.overview}
+        // release={movieDetail.release_date}
+        // budget={movieDetail.budget}
+        // genres={movieDetail.genres}
       />
     </div>
   )

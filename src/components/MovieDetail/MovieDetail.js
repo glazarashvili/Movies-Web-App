@@ -2,12 +2,12 @@ import React from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-import { url, apiKey, posterUrl } from '../../service/index'
+import MovieCard from './MovieCard'
+import MovieInfo from './MovieInfo'
 
 import classes from './MovieDetail.module.css'
 
-import MovieCard from './MovieCard'
-import MovieInfo from './MovieInfo'
+import { url, apiKey, posterUrl } from '../../service/index'
 
 export const MovieDetail = () => {
   const params = useParams()
@@ -23,6 +23,12 @@ export const MovieDetail = () => {
         setBackdrop(posterUrl + response.data.backdrop_path)
         setPoster(posterUrl + response.data.poster_path)
       })
+
+    axios
+      .get(`${url}/movie/${params.movieId}/reviews?api_key=${apiKey}`)
+      .then(response => {
+        console.log('reviews', response)
+      })
   }, [params.movieId])
 
   const movieInfo = [
@@ -34,7 +40,10 @@ export const MovieDetail = () => {
     },
     {
       name: 'Production Company',
-      prop: info.production_companies?.map(item => item.name).join(', '),
+      prop: info.production_companies
+        ?.slice(0, 2)
+        .map(item => item.name)
+        .join(', '),
     },
     {
       name: 'Genres',

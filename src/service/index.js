@@ -2,12 +2,6 @@ import axios from 'axios'
 
 export const apiKey = 'abcb68572e6980c3ad6d0e28dc35b6ce'
 export const url = 'https://api.themoviedb.org/3'
-// const nowPlayingUrl = `${url}/movie/now_playing`
-// const topratedUrl = `${url}/movie/top_rated`
-// const movieUrl = `${url}/movie`
-// const genreUrl = `${url}/genre/movie/list`
-// export const moviesUrl = `${url}/discover/movie`
-// const personUrl = `${url}/trending/person/week`
 export const posterUrl = 'https://image.tmdb.org/t/p/original'
 
 export const fetchOnGoingMovies = async () => {
@@ -21,7 +15,6 @@ export const fetchOnGoingMovies = async () => {
     return response
   })
 
-  // console.log(data.results)
   const modifiedData = data.results.map(item => ({
     id: item.id,
     title: item.title,
@@ -32,7 +25,6 @@ export const fetchOnGoingMovies = async () => {
     ranking: item.vote_average,
     poster: posterUrl + item?.backdrop_path,
   }))
-  // console.log('data', modifiedData)
 
   return modifiedData
 }
@@ -59,7 +51,6 @@ export const fetchPopularMovies = async () => {
     ranking: item.vote_average,
     poster: posterUrl + item?.backdrop_path,
   }))
-  // console.log('data', modifiedData)
 
   return modifiedData
 }
@@ -75,7 +66,6 @@ export const fetchTopRatedMovies = async () => {
     return response
   })
 
-  console.log(data.results)
   const modifiedData = data.results.map(item => ({
     id: item.id,
     title: item.title,
@@ -87,7 +77,6 @@ export const fetchTopRatedMovies = async () => {
     ranking: item.vote_average,
     poster: posterUrl + item?.backdrop_path,
   }))
-  console.log('data', modifiedData)
 
   return modifiedData
 }

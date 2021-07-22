@@ -1,0 +1,14 @@
+.comment {
+  margin: 0 auto;
+  background: #f7f4f4;
+  margin: 10px;
+}
+
+.comment-content {
+  color: rgb(184, 174, 174);
+  font-size: 14px;
+}
+
+.comment-action {
+  margin-left: 3px;
+}

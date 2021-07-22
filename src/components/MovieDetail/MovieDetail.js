@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 
 import MovieCard from './MovieCard'
 import MovieInfo from './MovieInfo'
+import Comments from './MovieComment/Comments'
 
 import classes from './MovieDetail.module.css'
 
@@ -77,6 +78,7 @@ export const MovieDetail = () => {
         ranking={info.vote_average}
       />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
+      <Comments />
     </div>
   )
 }

@@ -31,17 +31,15 @@ export const MovieDetail = () => {
       .get(`${url}/movie/${params.movieId}/reviews?api_key=${apiKey}`)
       .then(response => {
         setComment(response.data.results)
-        // setAvatar(response.data.results[0].author_details.avatar_path.slice(1))
-        setAvatar(
-          response.data.results.map(
-            result => result.author_details.avatar_path.slice(1)[0]
-          )
+
+        const arr = response.data.results.map(elem =>
+          elem.author_details.avatar_path.includes('http')
+            ? elem.author_details.avatar_path.slice(1)
+            : posterUrl + '/' + elem.author_details.avatar_path
         )
-        console.log(
-          response.data.results.map(result =>
-            result.author_details.avatar_path.slice(1)
-          )
-        )
+
+        console.log(arr)
+        setAvatar(arr)
       })
   }, [params.movieId])
 

@@ -12,11 +12,12 @@ import { url, apiKey, posterUrl } from '../../service/index'
 
 export const MovieDetail = () => {
   const params = useParams()
+
   const [info, setInfo] = React.useState({})
-  const [comments, setComment] = React.useState([])
   const [poster, setPoster] = React.useState('')
-  const [backdrop, setBackdrop] = React.useState('')
   const [avatar, setAvatar] = React.useState('')
+  const [comments, setComment] = React.useState([])
+  const [backdrop, setBackdrop] = React.useState('')
 
   React.useEffect(() => {
     axios
@@ -32,13 +33,15 @@ export const MovieDetail = () => {
       .then(response => {
         setComment(response.data.results)
 
-        const arr = response.data.results.map(elem =>
-          elem.author_details.avatar_path.includes('http')
+        const arr = response.data.results.map((elem, key) => {
+          console.log(key)
+          return elem.author_details.avatar_path?.includes('http')
             ? elem.author_details.avatar_path.slice(1)
             : posterUrl + '/' + elem.author_details.avatar_path
-        )
+        })[1]
 
         console.log(arr)
+        console.log(response.data.results)
         setAvatar(arr)
       })
   }, [params.movieId])
@@ -81,8 +84,6 @@ export const MovieDetail = () => {
     { name: 'Popularity', prop: info.popularity },
   ]
 
-  // console.log(comments.author)
-
   return (
     <div className={classes['detail-menu']}>
       <MovieCard
@@ -92,9 +93,9 @@ export const MovieDetail = () => {
       />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
       <Comments
+        avatar={avatar}
         comms={comments}
         author={comments.author}
-        avatar={avatar}
         comment={comments.comment}
       />
     </div>

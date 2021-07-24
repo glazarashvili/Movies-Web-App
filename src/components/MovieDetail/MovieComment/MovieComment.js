@@ -51,7 +51,11 @@ const MovieComment = ({ author, comment, avatar }) => {
       actions={actions}
       author={<p>{author}</p>}
       avatar={<Avatar src={avatar} alt='avatar' />}
-      content={<p className={classes['comment-content']}>{comment}</p>}
+      content={
+        <p className={classes['comment-content']}>
+          {comment.substring(0, 500)}
+        </p>
+      }
       datetime={
         <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
           <span style={{ color: 'rgba(0, 135, 255, 1)' }}>

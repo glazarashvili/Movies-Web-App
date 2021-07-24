@@ -1,3 +1,9 @@
 .comments-section {
   width: 100%;
 }
+
+.not-loaded {
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 135, 255, 1);
+}

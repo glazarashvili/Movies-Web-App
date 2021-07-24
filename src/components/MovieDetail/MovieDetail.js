@@ -2,9 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-import MovieCard from './MovieCard'
-import MovieInfo from './MovieInfo'
-import Comments from './MovieComment/Comments'
+import MovieCard from './MovieInfo/MovieCard'
+import MovieInfo from './MovieInfo/MovieInfo'
+import Comments from './Comments/Comments'
 
 import classes from './MovieDetail.module.css'
 

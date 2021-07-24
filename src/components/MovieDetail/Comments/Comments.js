@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieComment from './MovieComment'
+import Comment from './Comment'
 
 import Wrapper from '../../../ui/Wrapper'
 import classes from './Comments.module.css'
@@ -13,7 +13,7 @@ const Comments = ({ comms, avatar }) => {
         comms
           .map(comm => {
             return (
-              <MovieComment
+              <Comment
                 key={comm.id}
                 avatar={avatar}
                 author={comm.author}

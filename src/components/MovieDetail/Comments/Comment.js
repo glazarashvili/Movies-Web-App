@@ -1,5 +1,5 @@
 import React, { createElement, useState } from 'react'
-import { Comment, Tooltip, Avatar } from 'antd'
+import { Comment as Comm, Tooltip, Avatar } from 'antd'
 import moment from 'moment'
 import {
   DislikeOutlined,
@@ -8,9 +8,9 @@ import {
   LikeFilled,
 } from '@ant-design/icons'
 
-import classes from './MovieComment.module.css'
+import classes from './Comment.module.css'
 
-const MovieComment = ({ author, comment, avatar }) => {
+const Comment = ({ author, comment, avatar }) => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
   const [readMore, setReadMore] = useState(false)
@@ -47,7 +47,7 @@ const MovieComment = ({ author, comment, avatar }) => {
   ]
 
   return (
-    <Comment
+    <Comm
       className={classes.comment}
       actions={actions}
       author={<p>{author}</p>}
@@ -75,4 +75,4 @@ const MovieComment = ({ author, comment, avatar }) => {
   )
 }
 
-export default MovieComment
+export default Comment

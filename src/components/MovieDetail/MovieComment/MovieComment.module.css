@@ -3,11 +3,19 @@
   background: #f7f4f4;
   margin: 10px;
   padding: 0 10px;
+  line-height: 20px;
 }
 
 .comment-content {
   color: rgb(184, 174, 174);
   font-size: 14px;
+}
+
+.comment-content > span {
+  color: #0087ff;
+  font-weight: 300;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .comment-action {

@@ -13,6 +13,7 @@ import classes from './MovieComment.module.css'
 const MovieComment = ({ author, comment, avatar }) => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
+  const [readMore, setReadMore] = useState(false)
   const [action, setAction] = useState(null)
 
   const like = () => {
@@ -52,9 +53,16 @@ const MovieComment = ({ author, comment, avatar }) => {
       author={<p>{author}</p>}
       avatar={<Avatar src={avatar} alt='avatar' />}
       content={
-        <p className={classes['comment-content']}>
-          {comment.substring(0, 500)}
-        </p>
+        <div>
+          <p className={classes['comment-content']}>
+            {readMore ? comment : `${comment.substring(0, 500)}...`}
+            {comment.length > 300 && (
+              <span onClick={() => setReadMore(!readMore)}>
+                {readMore ? 'Show less' : 'Show more'}
+              </span>
+            )}
+          </p>
+        </div>
       }
       datetime={
         <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>

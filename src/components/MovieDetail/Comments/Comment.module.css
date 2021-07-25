@@ -1,18 +1,19 @@
 .comment {
-  margin: 0 auto;
   background: #f7f4f4;
-  margin: 10px;
-  padding: 0 10px;
+  margin: 20px 0;
+  padding: 0 8px 0 10px;
   line-height: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
 }
 
 .comment-content {
-  color: rgb(184, 174, 174);
+  color: #6c757d;
   font-size: 14px;
 }
 
 .comment-content > span {
-  color: #0087ff;
+  color: #3a86ff;
   font-weight: 300;
   margin-left: 5px;
   cursor: pointer;

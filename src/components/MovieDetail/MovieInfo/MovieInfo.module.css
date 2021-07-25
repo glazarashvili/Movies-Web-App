@@ -43,7 +43,7 @@
 
 .list-item {
   display: inline;
-  color: rgba(0, 135, 255, 1);
+  color: #3a86ff;
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 18px;
@@ -55,7 +55,7 @@
 }
 
 .list-item > span {
-  color: rgb(184, 174, 174);
+  color: #6c757d;
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 18px;

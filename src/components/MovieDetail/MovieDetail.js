@@ -23,20 +23,14 @@ export const MovieDetail = () => {
       .get(`${url}/movie/${params.movieId}?api_key=${apiKey}`)
       .then(response => {
         setInfo(response.data)
-        setBackdrop(posterUrl + response.data.backdrop_path)
         setPoster(posterUrl + response.data.poster_path)
+        setBackdrop(posterUrl + response.data.backdrop_path)
       })
 
     axios
       .get(`${url}/movie/${params.movieId}/reviews?api_key=${apiKey}`)
       .then(response => {
         setComments(response.data.results)
-
-        const arr = response.data.results.map((elem, key) => {
-          return elem.author_details.avatar_path?.includes('http')
-            ? elem.author_details.avatar_path.slice(1)
-            : posterUrl + '/' + elem.author_details.avatar_path
-        })[1]
       })
   }, [params.movieId])
 

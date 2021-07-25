@@ -1,11 +1,11 @@
 .wrapper {
   background: #fff;
   width: 50%;
-  border-radius: 5px;
   padding: 30px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 0 auto;
+  border-radius: 5px;
   animation: moveInBottom 0.5s ease-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @keyframes moveInBottom {

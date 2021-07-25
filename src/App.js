@@ -2,10 +2,9 @@ import React from 'react'
 
 import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom'
 
-import { appRoutes } from './const/app-routes'
-
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import { appRoutes } from './const/app-routes'
 
 import * as views from './pages'
 

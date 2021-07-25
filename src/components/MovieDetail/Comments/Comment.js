@@ -65,10 +65,9 @@ const Comment = ({ author, comment, avatar, date }) => {
         </div>
       }
       datetime={
-        <Tooltip>
+        <Tooltip title={moment().format(date)}>
           <span style={{ color: 'rgba(0, 135, 255, 1)' }}>{date}</span>
         </Tooltip>
-        // title={moment().format(commentCreated)}
         // 'YYYY-MM-DD HH:mm:ss'
       }
     />

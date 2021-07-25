@@ -3,7 +3,7 @@ import { Select } from 'antd'
 const { Option } = Select
 
 function handleChange(value) {
-  console.log(`selected ${value}`)
+  // console.log(`selected ${value}`)
 }
 
 const CommentsFilter = () => {

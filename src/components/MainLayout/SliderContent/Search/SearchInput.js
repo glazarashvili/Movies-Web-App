@@ -5,9 +5,9 @@ import classes from './SearchInput.module.css'
 const SearchInput = ({ onFocus, zIndex }) => {
   return (
     <input
-      placeholder='Search...'
       type='search'
       onFocus={onFocus}
+      placeholder='Search...'
       style={{ zIndex: zIndex }}
       className={classes['search-input']}
     />

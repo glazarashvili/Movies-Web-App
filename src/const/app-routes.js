@@ -1,4 +1,4 @@
-export const AppRoutes = [
+export const appRoutes = [
   {
     path: 'home',
     component: 'HomePage',

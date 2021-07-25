@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom'
 
-import { AppRoutes as routes } from './routes/app-routes'
+import { appRoutes } from './const/app-routes'
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -16,7 +16,7 @@ const App = () => {
       <Route path='/' exact>
         <Redirect to='home' />
       </Route>
-      {routes.map(route => {
+      {appRoutes.map(route => {
         const Component = views[route.component]
         return (
           <Route

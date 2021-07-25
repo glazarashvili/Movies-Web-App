@@ -9,7 +9,6 @@ import { useDelayUnmount } from '../../../../hooks/useDelayUnmount'
 
 const Search = () => {
   const [isMounted, setIsMounted] = React.useState(false)
-
   const shouldRenderChild = useDelayUnmount(isMounted, 400)
 
   return (

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import classes from './SearchPopup.module.css'
 
 const SearchPopup = ({ className, popupShown, animationClass }) => {

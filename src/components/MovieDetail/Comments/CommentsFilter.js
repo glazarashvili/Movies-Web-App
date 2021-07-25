@@ -14,7 +14,7 @@ const CommentsFilter = () => {
       onChange={handleChange}>
       <Option value='Newest'>Newest</Option>
       <Option value='Oldest'>Oldest</Option>
-      <Option value='Popular'>Popular</Option>
+      {/* <Option value='Popular'>Popular</Option> */}
     </Select>
   )
 }

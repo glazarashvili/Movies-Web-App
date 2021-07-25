@@ -10,7 +10,7 @@ import {
 
 import classes from './Comment.module.css'
 
-const Comment = ({ author, comment, avatar }) => {
+const Comment = ({ author, comment, avatar, date }) => {
   const [likes, setLikes] = useState(0)
   const [dislikes, setDislikes] = useState(0)
   const [readMore, setReadMore] = useState(false)
@@ -65,11 +65,11 @@ const Comment = ({ author, comment, avatar }) => {
         </div>
       }
       datetime={
-        <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-          <span style={{ color: 'rgba(0, 135, 255, 1)' }}>
-            {moment().fromNow()}
-          </span>
+        <Tooltip>
+          <span style={{ color: 'rgba(0, 135, 255, 1)' }}>{date}</span>
         </Tooltip>
+        // title={moment().format(commentCreated)}
+        // 'YYYY-MM-DD HH:mm:ss'
       }
     />
   )

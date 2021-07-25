@@ -3,6 +3,13 @@
   animation: moveInBottom 0.5s ease-out;
 }
 
+.comments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
 .not-loaded {
   display: flex;
   justify-content: center;

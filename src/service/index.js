@@ -3,6 +3,8 @@ import axios from 'axios'
 export const apiKey = 'abcb68572e6980c3ad6d0e28dc35b6ce'
 export const url = 'https://api.themoviedb.org/3'
 export const posterUrl = 'https://image.tmdb.org/t/p/original'
+export const defaultIcon =
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_HcS2JpDEqN5_Z6nMyHZ3PlYT-1FlQpiU2W6Vby4yMcw3ZjbkAi4U3zPJ1Ubb_6ygWuE&usqp=CAU'
 
 export const fetchOnGoingMovies = async () => {
   const { data } = await axios({

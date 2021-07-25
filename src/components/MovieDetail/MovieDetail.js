@@ -2,9 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+import Comments from './Comments/Comments'
 import MovieCard from './MovieInfo/MovieCard'
 import MovieInfo from './MovieInfo/MovieInfo'
-import Comments from './Comments/Comments'
 
 import classes from './MovieDetail.module.css'
 
@@ -15,8 +15,7 @@ export const MovieDetail = () => {
 
   const [info, setInfo] = React.useState({})
   const [poster, setPoster] = React.useState('')
-  const [avatar, setAvatar] = React.useState('')
-  const [comments, setComment] = React.useState([])
+  const [comments, setComments] = React.useState([])
   const [backdrop, setBackdrop] = React.useState('')
 
   React.useEffect(() => {
@@ -31,18 +30,13 @@ export const MovieDetail = () => {
     axios
       .get(`${url}/movie/${params.movieId}/reviews?api_key=${apiKey}`)
       .then(response => {
-        setComment(response.data.results)
+        setComments(response.data.results)
 
         const arr = response.data.results.map((elem, key) => {
-          console.log(key)
           return elem.author_details.avatar_path?.includes('http')
             ? elem.author_details.avatar_path.slice(1)
             : posterUrl + '/' + elem.author_details.avatar_path
         })[1]
-
-        console.log(arr)
-        console.log(response.data.results)
-        setAvatar(arr)
       })
   }, [params.movieId])
 
@@ -92,12 +86,7 @@ export const MovieDetail = () => {
         ranking={info.vote_average}
       />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
-      <Comments
-        avatar={avatar}
-        comms={comments}
-        author={comments.author}
-        comment={comments.comment}
-      />
+      <Comments comms={comments} />
     </div>
   )
 }

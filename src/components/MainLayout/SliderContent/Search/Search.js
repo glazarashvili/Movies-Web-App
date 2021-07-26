@@ -19,14 +19,16 @@ const Search = () => {
 
   React.useEffect(() => {
     const searchMovie = async () => {
-      if (movieValue.length) {
-        axios
-          .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
-          .then(response => {
-            console.log(response)
-            setSearchedMovies(response.data.results.slice(0, 10))
-          })
-      }
+      setTimeout(() => {
+        if (movieValue) {
+          axios
+            .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
+            .then(response => {
+              console.log(response)
+              setSearchedMovies(response.data.results.slice(0, 12))
+            })
+        }
+      }, 1000)
     }
 
     searchMovie()

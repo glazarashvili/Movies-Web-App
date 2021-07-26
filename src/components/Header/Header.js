@@ -32,7 +32,10 @@ const Header = () => {
   return (
     <div
       className={classes.header}
-      style={{ background: bgColor, transition: 'background 0.3s linear' }}>
+      style={{
+        background: bgColor,
+        transition: 'background 0.3s linear',
+      }}>
       <div className={classes['header-bar']}>
         <Link to='/'>
           <h1 className={`${classes.heading} ${fontColor}`}>MovieDB</h1>

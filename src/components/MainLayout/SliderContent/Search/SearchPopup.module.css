@@ -4,6 +4,11 @@
   top: 98px;
 }
 
+.movie-poster {
+  width: 120px;
+  height: 180px;
+}
+
 .fade-animation {
   animation: animate 0.4s linear;
 }

@@ -3,7 +3,7 @@ import { Select } from 'antd'
 const { Option } = Select
 
 function handleChange(value) {
-  // console.log(`selected ${value}`)
+  console.log(`selected ${value}`)
 }
 
 const CommentsFilter = () => {
@@ -14,7 +14,6 @@ const CommentsFilter = () => {
       onChange={handleChange}>
       <Option value='Newest'>Newest</Option>
       <Option value='Oldest'>Oldest</Option>
-      {/* <Option value='Popular'>Popular</Option> */}
     </Select>
   )
 }

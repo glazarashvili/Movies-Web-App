@@ -12,9 +12,9 @@ import classes from './Comment.module.css'
 
 const Comment = ({ author, comment, avatar, date }) => {
   const [likes, setLikes] = useState(0)
+  const [action, setAction] = useState(null)
   const [dislikes, setDislikes] = useState(0)
   const [readMore, setReadMore] = useState(false)
-  const [action, setAction] = useState(null)
 
   const like = () => {
     setLikes(1)
@@ -66,9 +66,8 @@ const Comment = ({ author, comment, avatar, date }) => {
       }
       datetime={
         <Tooltip title={moment().format(date)}>
-          <span style={{ color: '#3a86ff' }}>{date}</span>
+          <span style={{ color: '#3a86ff' }}>{date.slice(0, 10)}</span>
         </Tooltip>
-        // 'YYYY-MM-DD HH:mm:ss'
       }
     />
   )

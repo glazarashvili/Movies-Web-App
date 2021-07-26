@@ -16,24 +16,40 @@ const Search = () => {
   const [searchedMovies, setSearchedMovies] = React.useState([])
   const shouldRenderChild = useDelayUnmount(isMounted, 400)
 
-  const searchMovie = e => {
-    console.log(e.target.value)
-    if (e.target.value.length > 3) {
+  const [movieValue, setMovieValue] = React.useState('')
+
+  React.useEffect(() => {
+    const searchMovie = async () => {
       axios
-        .get(`${url}/search/movie?query=${e.target.value}&api_key=${apiKey}`)
+        .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
         .then(response => {
           console.log(response)
           setSearchedMovies(response.data.results)
         })
     }
-  }
+
+    searchMovie()
+  }, [movieValue])
+
+  // const searchMovie = e => {
+  //   console.log(e.target.value)
+  //   if (e.target.value.length > 3) {
+  //     axios
+  //       .get(`${url}/search/movie?query=${e.target.value}&api_key=${apiKey}`)
+  //       .then(response => {
+  //         console.log(response)
+  //         setSearchedMovies(response.data.results)
+  //       })
+  //   }
+  // }
 
   return (
     <div className={classes['search-bar']}>
       <SearchInput
         zIndex={isMounted ? 2000 : 0}
         onFocus={() => setIsMounted(true)}
-        searchMovie={searchMovie}
+        movieValue={movieValue}
+        onChange={e => setMovieValue(e.target.value)}
       />
       <SearchIcon
         zIndex={isMounted ? 2000 : 0}
@@ -41,6 +57,7 @@ const Search = () => {
       />
       {shouldRenderChild && (
         <SearchPopup
+          id={searchedMovies.id}
           className={`${classes.backdrop}`}
           searchedMovies={searchedMovies}
           animationClass={`${

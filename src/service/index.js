@@ -5,6 +5,8 @@ export const apiKey = 'abcb68572e6980c3ad6d0e28dc35b6ce'
 export const posterUrl = 'https://image.tmdb.org/t/p/original'
 export const defaultIcon =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_HcS2JpDEqN5_Z6nMyHZ3PlYT-1FlQpiU2W6Vby4yMcw3ZjbkAi4U3zPJ1Ubb_6ygWuE&usqp=CAU'
+export const defaultPoster =
+  'https://pbs.twimg.com/profile_images/1243623122089041920/gVZIvphd_400x400.jpg'
 
 export const fetchOnGoingMovies = async () => {
   const { data } = await axios({

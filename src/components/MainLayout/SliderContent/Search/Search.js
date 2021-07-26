@@ -1,25 +1,24 @@
 import React from 'react'
+import axios from 'axios'
 
 import SearchPopup from './SearchPopup'
 import SearchInput from './SearchInput'
 import SearchIcon from '../../../SVG/SearchIcon'
 
-import axios from 'axios'
-
 import { url, apiKey } from '../../../../service/index'
-
-import classes from './Search.module.css'
 import { useDelayUnmount } from '../../../../hooks/useDelayUnmount'
 
+import classes from './Search.module.css'
+
 const Search = () => {
-  const [isMounted, setIsMounted] = React.useState(false)
-  const [searchedMovies, setSearchedMovies] = React.useState([])
   const [movieValue, setMovieValue] = React.useState('')
+  const [isMounted, setIsMounted] = React.useState(false)
   const shouldRenderChild = useDelayUnmount(isMounted, 400)
+  const [searchedMovies, setSearchedMovies] = React.useState([])
 
   React.useEffect(() => {
     const searchMovie = async () => {
-      setTimeout(() => {
+      const identifier = setTimeout(() => {
         if (movieValue) {
           axios
             .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
@@ -29,6 +28,9 @@ const Search = () => {
             })
         }
       }, 1000)
+      return () => {
+        clearInterval(identifier)
+      }
     }
 
     searchMovie()

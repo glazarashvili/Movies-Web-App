@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import classes from './SearchPopup.module.css'
 
-import { Link } from 'react-router-dom'
-
-import { posterUrl, defaultPoster } from '../../../../service/index'
+import {
+  posterUrl,
+  popupPoster,
+  defaultPoster,
+} from '../../../../service/index'
 
 const SearchPopup = ({
   className,
@@ -17,9 +20,9 @@ const SearchPopup = ({
   return (
     <React.Fragment>
       <div className={`${classes['search-popup']} ${animationClass}`}>
-        {searchedMovies.length > 0 ? (
+        {searchedMovies.length ? (
           <div
-            style={{ width: popupWidth, border: '5px' }}
+            style={{ width: popupWidth }}
             className={classes['movie-posters']}>
             {searchedMovies.map(elem => {
               return (
@@ -39,9 +42,9 @@ const SearchPopup = ({
           </div>
         ) : (
           <img
-            src='https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg'
+            src={popupPoster}
             alt='adv-poster'
-            style={{ width: popupWidth, border: '5px' }}
+            style={{ width: popupWidth, borderRadius: '5px' }}
           />
         )}
       </div>

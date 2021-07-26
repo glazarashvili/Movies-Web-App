@@ -41,11 +41,13 @@ const SearchPopup = ({
             })}
           </div>
         ) : (
-          <img
-            src={popupPoster}
-            alt='adv-poster'
-            style={{ width: popupWidth, borderRadius: '5px' }}
-          />
+          <div>
+            <img
+              src={popupPoster}
+              alt='adv-poster'
+              style={{ width: popupWidth, borderRadius: '5px' }}
+            />
+          </div>
         )}
       </div>
       <div

@@ -1,12 +1,21 @@
 .search-popup {
   position: absolute;
   z-index: 10000;
-  top: 98px;
+  top: 102px;
+}
+
+.movie-posters {
+  background: #fff;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .movie-poster {
-  width: 120px;
-  height: 180px;
+  width: 150px;
+  height: 225px;
+  margin: 0 5px;
 }
 
 .fade-animation {

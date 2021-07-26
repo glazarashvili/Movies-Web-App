@@ -14,34 +14,23 @@ import { useDelayUnmount } from '../../../../hooks/useDelayUnmount'
 const Search = () => {
   const [isMounted, setIsMounted] = React.useState(false)
   const [searchedMovies, setSearchedMovies] = React.useState([])
-  const shouldRenderChild = useDelayUnmount(isMounted, 400)
-
   const [movieValue, setMovieValue] = React.useState('')
+  const shouldRenderChild = useDelayUnmount(isMounted, 400)
 
   React.useEffect(() => {
     const searchMovie = async () => {
-      axios
-        .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
-        .then(response => {
-          console.log(response)
-          setSearchedMovies(response.data.results)
-        })
+      if (movieValue.length) {
+        axios
+          .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
+          .then(response => {
+            console.log(response)
+            setSearchedMovies(response.data.results.slice(0, 10))
+          })
+      }
     }
 
     searchMovie()
   }, [movieValue])
-
-  // const searchMovie = e => {
-  //   console.log(e.target.value)
-  //   if (e.target.value.length > 3) {
-  //     axios
-  //       .get(`${url}/search/movie?query=${e.target.value}&api_key=${apiKey}`)
-  //       .then(response => {
-  //         console.log(response)
-  //         setSearchedMovies(response.data.results)
-  //       })
-  //   }
-  // }
 
   return (
     <div className={classes['search-bar']}>

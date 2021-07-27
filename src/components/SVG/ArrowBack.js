@@ -6,7 +6,7 @@ const ArrowBack = ({ className, buttonClickHandler }) => {
       className={className}
       onClick={buttonClickHandler}
       width='34'
-      height='120'
+      height='100'
       viewBox='0 0 34 172'
       fill='none'
       strokeWidth='4'

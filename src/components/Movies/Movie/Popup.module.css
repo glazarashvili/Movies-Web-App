@@ -16,15 +16,21 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-@media (min-width: 1600px) {
+@media (max-width: 1200px) and (min-width: 900px) {
   .popup {
-    min-width: 370px;
+    width: 350px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1290px) and (min-width: 1000px) {
   .popup {
-    width: 290px;
+    width: 380px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .popup {
+    width: 400px;
   }
 }
 

@@ -4,7 +4,7 @@ import MovieItem from './Movie/MovieItem'
 import classes from './Movies.module.css'
 import Loading from '../../ui/Loading'
 
-const Movies = ({ func, moviesType }) => {
+const Movies = ({ func, moviesType, quantity }) => {
   const [movies, setMovies] = React.useState([])
   const [loading, setLoading] = React.useState(false)
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
@@ -31,7 +31,7 @@ const Movies = ({ func, moviesType }) => {
       <div className={classes['movies-type']}>{moviesType}</div>
       <div className={classes['movies-menu']}>
         {movies.length &&
-          movies.slice(0, 15).map(movie => {
+          movies.slice(0, quantity).map(movie => {
             return (
               <MovieItem
                 key={movie.id}

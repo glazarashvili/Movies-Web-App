@@ -32,6 +32,34 @@ export const MovieDetail = () => {
       .then(response => {
         setComments(response.data.results)
       })
+
+    axios
+      .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
+      .then(response => {
+        console.log(response, 'images')
+        // aq wamovigebt filmis posterebs
+      })
+
+    axios
+      .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
+      .then(response => {
+        console.log(response, 'cast')
+        // aq wamovigebt filmis casts, msaxiobebs da a.sh.
+      })
+
+    axios
+      .get(`${url}/movie/${params.movieId}/similar?api_key=${apiKey}`)
+      .then(response => {
+        console.log(response, 'similar')
+        // aq wamovigebt msgavs filmebs
+      })
+
+    axios
+      .get(`${url}/movie/${params.movieId}/videos?api_key=${apiKey}`)
+      .then(response => {
+        console.log(response, 'videos')
+        // aq wamovigebt filmis trailers, msaxiobebs da a.sh.
+      })
   }, [params.movieId])
 
   const movieInfo = [

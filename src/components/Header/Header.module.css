@@ -22,13 +22,13 @@
   }
 }
 
-@media (max-width: 1400px) and (min-width: 1001px) {
+@media (max-width: 1300px) and (min-width: 1001px) {
   .header-bar {
     width: 70%;
   }
 }
 
-@media (max-width: 1700px) and (min-width: 1401px) {
+@media (max-width: 1700px) and (min-width: 1301px) {
   .header-bar {
     width: 60%;
   }

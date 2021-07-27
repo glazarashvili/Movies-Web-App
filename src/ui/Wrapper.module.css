@@ -14,13 +14,13 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 1001px) {
+@media (max-width: 1300px) and (min-width: 1001px) {
   .wrapper {
     width: 70%;
   }
 }
 
-@media (max-width: 1700px) and (min-width: 1401px) {
+@media (max-width: 1700px) and (min-width: 1301px) {
   .wrapper {
     width: 60%;
   }

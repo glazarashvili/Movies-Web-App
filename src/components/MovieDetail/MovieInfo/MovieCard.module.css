@@ -21,13 +21,13 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 1001px) {
+@media (max-width: 1300px) and (min-width: 1001px) {
   .movie-content {
     width: 70%;
   }
 }
 
-@media (max-width: 1700px) and (min-width: 1201px) {
+@media (max-width: 1700px) and (min-width: 1301px) {
   .movie-content {
     width: 60%;
   }

@@ -40,7 +40,8 @@ export const fetchPopularMovies = async () => {
     method: 'get',
     url: `${url}/movie/popular/?api_key=${apiKey}`,
     params: {
-      page: Math.floor(Math.random() * 10) + 1,
+      page: Math.floor(Math.random() * 100) + 1,
+      // that pages are randomly and need to fix
     },
   }).then(response => {
     return response

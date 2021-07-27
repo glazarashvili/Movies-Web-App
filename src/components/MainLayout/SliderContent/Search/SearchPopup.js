@@ -15,15 +15,13 @@ const SearchPopup = ({
   animationClass,
   searchedMovies,
 }) => {
-  const popupWidth = window.innerWidth / 2
+  // const popupWidth = window.innerWidth / 2
 
   return (
     <React.Fragment>
       <div className={`${classes['search-popup']} ${animationClass}`}>
         {searchedMovies.length ? (
-          <div
-            style={{ width: popupWidth }}
-            className={classes['movie-posters']}>
+          <div className={classes['movie-posters']}>
             {searchedMovies.map(elem => {
               return (
                 <Link key={elem.id} to={`/movies/${elem.id}`}>
@@ -41,11 +39,11 @@ const SearchPopup = ({
             })}
           </div>
         ) : (
-          <div>
+          <div className={classes['search-popup-poster']}>
             <img
               src={popupPoster}
               alt='adv-poster'
-              style={{ width: popupWidth, borderRadius: '5px' }}
+              className={classes['adv-poster']}
             />
           </div>
         )}

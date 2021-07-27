@@ -1,5 +1,5 @@
 export * from './NewMovies'
-export * from './HomePage'
+export * from './HomePage/HomePage'
 export * from './PopularMovies'
 export * from './TopRatedMovies'
 export * from './TvShowsPage'

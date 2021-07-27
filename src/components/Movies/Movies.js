@@ -27,8 +27,7 @@ const Movies = ({ func, moviesType, quantity }) => {
   if (loading) return <Loading />
 
   return (
-    <section>
-      <div className={classes['movies-type']}>{moviesType}</div>
+    <section className={classes['movies-section']}>
       <div className={classes['movies-menu']}>
         {movies.length &&
           movies.slice(0, quantity).map(movie => {

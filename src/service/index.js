@@ -87,3 +87,29 @@ export const fetchTopRatedMovies = async () => {
 
   return modifiedData
 }
+
+export const fetchNewMovies = async () => {
+  const { data } = await axios({
+    method: 'get',
+    url: `${url}/movie/now_playing/?api_key=${apiKey}`,
+    params: {
+      page: Math.floor(Math.random() * 10) + 1,
+    },
+  }).then(response => {
+    return response
+  })
+
+  const modifiedData = data.results.map(item => ({
+    id: item.id,
+    title: item.title,
+    image: posterUrl + item?.poster_path,
+    language: item.original_language,
+    desc: item.overview,
+    genre_ids: item.genre_ids,
+    release_date: item.release_date,
+    ranking: item.vote_average,
+    poster: posterUrl + item?.backdrop_path,
+  }))
+
+  return modifiedData
+}

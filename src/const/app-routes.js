@@ -6,7 +6,7 @@ export const appRoutes = [
   },
   {
     path: 'movies',
-    component: 'MoviesPage',
+    component: 'PopularMovies',
     exact: true,
   },
   {
@@ -20,14 +20,14 @@ export const appRoutes = [
     exact: false,
   },
   {
-    path: 'tv',
-    component: 'TvPage',
+    path: 'top-rated',
+    component: 'TopRatedMovies',
     exact: false,
   },
 
   {
-    path: 'cinemania',
-    component: 'CinemaniaPage',
+    path: 'newmovies',
+    component: 'NewMovies',
     exact: false,
   },
 ]

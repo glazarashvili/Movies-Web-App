@@ -44,19 +44,19 @@ const Header = () => {
           <NavLink to='/movies'>
             <div className={classes['nav-item']}>
               <MovieSvg fill={fill} />
-              <p className={fontColor}>MOVIES</p>
+              <p className={fontColor}>POPULAR</p>
             </div>
           </NavLink>
-          <NavLink to='/tv'>
+          <NavLink to='/top-rated'>
             <div className={classes['nav-item']}>
               <TvSvg fill={fill} />
-              <p className={fontColor}>TV</p>
+              <p className={fontColor}>TOP</p>
             </div>
           </NavLink>
-          <NavLink to='/cinemania'>
+          <NavLink to='/newmovies'>
             <div className={classes['nav-item']}>
               <TvShowsSvg fill={fill} />
-              <p className={fontColor}>CINEMANIA</p>
+              <p className={fontColor}>PREMIERE</p>
             </div>
           </NavLink>
           <NavLink to='/tvshows'>

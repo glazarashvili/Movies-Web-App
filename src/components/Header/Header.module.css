@@ -16,6 +16,24 @@
   width: 50%;
 }
 
+@media (max-width: 1000px) {
+  .header-bar {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1001px) {
+  .header-bar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1700px) and (min-width: 1401px) {
+  .header-bar {
+    width: 60%;
+  }
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;

@@ -8,6 +8,24 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1001px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1700px) and (min-width: 1401px) {
+  .wrapper {
+    width: 60%;
+  }
+}
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;

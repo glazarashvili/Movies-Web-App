@@ -12,6 +12,24 @@
   width: 50%;
 }
 
+@media (max-width: 1000px) {
+  .movie-info {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1001px) {
+  .movie-info {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1700px) and (min-width: 1401px) {
+  .movie-info {
+    width: 60%;
+  }
+}
+
 .movie-poster {
   width: 200px;
   height: 300px;

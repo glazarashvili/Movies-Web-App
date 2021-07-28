@@ -9,8 +9,16 @@ export const HomePage = () => {
   return (
     <React.Fragment>
       <MainLayout />
-      <MovieMenu func={fetchPopularMovies} type='Popular' />
-      <MovieMenu func={fetchTopRatedMovies} type='Top Rated' />
+      <MovieMenu
+        func={fetchPopularMovies}
+        heading='Popular'
+        pathname='/movies'
+      />
+      <MovieMenu
+        func={fetchTopRatedMovies}
+        heading='Top Rated'
+        pathname='/top-rated'
+      />
     </React.Fragment>
   )
 }

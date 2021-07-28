@@ -6,6 +6,8 @@ import Comments from './Comments/Comments'
 import MovieCard from './MovieInfo/MovieCard'
 import MovieInfo from './MovieInfo/MovieInfo'
 
+import Dialog from '../../ui/Modal'
+
 import classes from './MovieDetail.module.css'
 
 import { url, apiKey, posterUrl } from '../../service/index'
@@ -107,6 +109,7 @@ export const MovieDetail = () => {
         movieTitle={info.title}
         ranking={info.vote_average}
       />
+      <Dialog />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
       <Comments comms={comments} />
     </div>

@@ -9,8 +9,6 @@ import { appRoutes } from './const/app-routes'
 import * as views from './pages'
 
 const App = () => {
-  console.log(window.innerWidth)
-
   return (
     <Router>
       <Header />

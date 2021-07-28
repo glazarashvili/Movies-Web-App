@@ -2,17 +2,24 @@ import React from 'react'
 
 import classes from './MovieInfo.module.css'
 
-import Template from '../../../ui/Template'
+import Modal from '../../../ui/Modal'
 
-const MovieInfo = ({ poster, movieInfo }) => {
+import Template from '../../../ui/Template'
+import TrailerModal from './TrailerModal'
+
+const MovieInfo = ({ poster, movieInfo, trailers }) => {
   return (
     <div className={classes['movie-item']}>
       <Template className={classes['movie-info']}>
-        <img
-          className={classes['movie-poster']}
-          src={poster}
-          alt='movie-poster'
-        />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <img
+            className={classes['movie-poster']}
+            src={poster}
+            alt='movie-poster'
+          />
+          <TrailerModal trailers={trailers} />
+        </div>
+
         <div className={classes['movie-description']}>
           {movieInfo.map(movie => {
             return (

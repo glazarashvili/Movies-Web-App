@@ -1,13 +1,28 @@
 import React, { useState } from 'react'
-import { Modal, Button } from 'antd'
+import { Modal as Dialog, Button } from 'antd'
 
-const Dialog = () => {
+const Modal = ({ children, modalFooter, modalTitle, modalWidth }) => {
   const [visible, setVisible] = useState(false)
   return (
-    <>
-      <div></div>
-    </>
+    <React.Fragment>
+      <Button
+        type='secondary'
+        color='secondary'
+        onClick={() => setVisible(true)}>
+        Watch Trailer
+      </Button>
+      <Dialog
+        title='Watch Trailer'
+        centered
+        footer={modalFooter}
+        title={modalTitle}
+        visible={visible}
+        onCancel={() => setVisible(false)}
+        width={modalWidth}>
+        <div>{children}</div>
+      </Dialog>
+    </React.Fragment>
   )
 }
 
-export default Dialog
+export default Modal

@@ -6,7 +6,7 @@ import Comments from './Comments/Comments'
 import MovieCard from './MovieInfo/MovieCard'
 import MovieInfo from './MovieInfo/MovieInfo'
 
-import Dialog from '../../ui/Modal'
+// import Modal from '../../ui/Modal'
 
 import classes from './MovieDetail.module.css'
 
@@ -19,6 +19,7 @@ export const MovieDetail = () => {
   const [poster, setPoster] = React.useState('')
   const [comments, setComments] = React.useState([])
   const [backdrop, setBackdrop] = React.useState('')
+  const [video, setVideo] = React.useState([])
 
   React.useEffect(() => {
     axios
@@ -60,6 +61,7 @@ export const MovieDetail = () => {
       .get(`${url}/movie/${params.movieId}/videos?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'videos')
+        setVideo(response.data.results)
         // aq wamovigebt filmis trailers, msaxiobebs da a.sh.
       })
   }, [params.movieId])
@@ -109,8 +111,8 @@ export const MovieDetail = () => {
         movieTitle={info.title}
         ranking={info.vote_average}
       />
-      <Dialog />
-      <MovieInfo poster={poster} movieInfo={movieInfo} />
+      {/* <Modal /> */}
+      <MovieInfo poster={poster} movieInfo={movieInfo} videoLink={video} />
       <Comments comms={comments} />
     </div>
   )

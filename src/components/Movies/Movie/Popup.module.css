@@ -84,8 +84,11 @@
 }
 
 .ranking span {
-  border: 1px solid rgba(0, 135, 255, 1);
-  padding: 3px;
+  /* border: 1px solid rgba(0, 135, 255, 1); */
+  padding: 5px;
+  color: #000;
+  background: yellow;
+  border-radius: 2px;
 }
 
 .ranking p {

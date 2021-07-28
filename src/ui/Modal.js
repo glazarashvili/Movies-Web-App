@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import { Modal as Dialog, Button } from 'antd'
+import { Modal as Dialog } from 'antd'
+
+import ContainedButton from './Button'
 
 const Modal = ({ children, modalFooter, modalTitle, modalWidth, title }) => {
   const [visible, setVisible] = useState(false)
   return (
     <React.Fragment>
-      <Button
-        type='secondary'
-        color='secondary'
-        onClick={() => setVisible(true)}>
-        {title}
-      </Button>
+      <ContainedButton
+        title={title}
+        openModal={() => setVisible(true)}></ContainedButton>
       <Dialog
         centered
         footer={modalFooter}

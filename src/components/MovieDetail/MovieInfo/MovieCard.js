@@ -12,7 +12,7 @@ const MovieCard = ({ backdrop, movieTitle, ranking }) => {
       <Template className={classes['movie-content']}>
         <h1 className={classes['movie-title']}>{movieTitle}</h1>
         <div className={classes['movie-ranking']}>
-          <h1>IMDb</h1>
+          <h1>IMDB</h1>
           <p>{ranking}</p>
         </div>
       </Template>

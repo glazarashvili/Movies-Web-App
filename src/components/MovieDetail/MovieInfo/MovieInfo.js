@@ -16,8 +16,8 @@ const MovieInfo = ({ poster, movieInfo, trailers }) => {
             src={poster}
             alt='movie-poster'
           />
-          <PostersModal />
           <TrailerModal trailers={trailers} />
+          <PostersModal />
         </div>
 
         <div className={classes['movie-description']}>

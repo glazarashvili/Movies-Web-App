@@ -1,6 +1,6 @@
 import Modal from '../../../../ui/Modal'
 
-const TrailerModal = ({}) => {
+const TrailerModal = () => {
   return (
     <Modal
       title='Show Posters'

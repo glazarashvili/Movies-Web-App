@@ -24,7 +24,7 @@
 .trailers-menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .movie-description {
@@ -51,7 +51,7 @@
 
 .list-item {
   display: inline;
-  color: #3a86ff;
+  color: #419dd6;
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 18px;

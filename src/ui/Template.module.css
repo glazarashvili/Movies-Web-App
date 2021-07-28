@@ -8,13 +8,25 @@
   }
 }
 
-@media (max-width: 1300px) and (min-width: 1001px) {
+@media (max-width: 1100px) and (min-width: 1001px) {
+  .template-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1101px) {
   .template-container {
     width: 70%;
   }
 }
 
-@media (max-width: 1700px) and (min-width: 1301px) {
+@media (max-width: 1300px) and (min-width: 1201px) {
+  .template-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1301px) {
   .template-container {
     width: 60%;
   }

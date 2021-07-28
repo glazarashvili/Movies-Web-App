@@ -1,18 +1,25 @@
-.movies-section {
+/* .movies-section {
   width: 50%;
   margin: 0 auto;
-}
+} */
 
 .movies-menu {
   animation: moveInBottom 0.5s ease-out;
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px;
+  justify-content: center;
+  gap: 10px; */
+  display: grid;
+  grid-template-columns: repeat(5, 180px);
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .movies-section {
     width: 80%;
   }
@@ -28,7 +35,7 @@
   .movies-section {
     width: 60%;
   }
-}
+} */
 
 @keyframes moveInBottom {
   0% {

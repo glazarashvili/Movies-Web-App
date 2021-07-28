@@ -1,8 +1,9 @@
-import Modal from '../../../ui/Modal'
+import Modal from '../../../../ui/Modal'
 
 const TrailerModal = ({ trailers }) => {
   return (
     <Modal
+      title='Watch Trailer'
       modalFooter={null}
       modalTitle={null}
       modalWidth={window.innerWidth * 0.6}>

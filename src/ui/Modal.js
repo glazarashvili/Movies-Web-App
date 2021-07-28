@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal as Dialog, Button } from 'antd'
 
-const Modal = ({ children, modalFooter, modalTitle, modalWidth }) => {
+const Modal = ({ children, modalFooter, modalTitle, modalWidth, title }) => {
   const [visible, setVisible] = useState(false)
   return (
     <React.Fragment>
@@ -9,10 +9,9 @@ const Modal = ({ children, modalFooter, modalTitle, modalWidth }) => {
         type='secondary'
         color='secondary'
         onClick={() => setVisible(true)}>
-        Watch Trailer
+        {title}
       </Button>
       <Dialog
-        title='Watch Trailer'
         centered
         footer={modalFooter}
         title={modalTitle}

@@ -5,8 +5,9 @@ import classes from './MovieInfo.module.css'
 import Modal from '../../../ui/Modal'
 
 import Template from '../../../ui/Template'
+import TrailerModal from './TrailerModal'
 
-const MovieInfo = ({ poster, movieInfo, videoLink }) => {
+const MovieInfo = ({ poster, movieInfo, trailers }) => {
   return (
     <div className={classes['movie-item']}>
       <Template className={classes['movie-info']}>
@@ -16,7 +17,7 @@ const MovieInfo = ({ poster, movieInfo, videoLink }) => {
             src={poster}
             alt='movie-poster'
           />
-          <Modal videoLink={videoLink} />
+          <TrailerModal trailers={trailers} />
         </div>
 
         <div className={classes['movie-description']}>

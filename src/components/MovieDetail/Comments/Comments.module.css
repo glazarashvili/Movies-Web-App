@@ -20,7 +20,7 @@
 .not-loaded {
   display: flex;
   justify-content: center;
-  color: rgb(0, 135, 255);
+  color: #419dd6;
   margin: 0 auto;
 }
 

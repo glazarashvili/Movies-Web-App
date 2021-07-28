@@ -66,7 +66,7 @@ const Comment = ({ author, comment, avatar, date }) => {
       }
       datetime={
         <Tooltip title={moment().format(date)}>
-          <span style={{ color: '#3a86ff' }}>{date.slice(0, 10)}</span>
+          <span style={{ color: '#419DD6' }}>{date.slice(0, 10)}</span>
         </Tooltip>
       }
     />

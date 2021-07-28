@@ -2,22 +2,22 @@ import React from 'react'
 
 import classes from './MovieInfo.module.css'
 
-import Modal from '../../../ui/Modal'
-
 import Template from '../../../ui/Template'
-import TrailerModal from './TrailerModal'
+import PostersModal from './Modals/PostersModal'
+import TrailerModal from './Modals/TrailerModal'
 
 const MovieInfo = ({ poster, movieInfo, trailers }) => {
   return (
-    <div className={classes['movie-item']}>
+    <section className={classes['movie-item']}>
       <Template className={classes['movie-info']}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div className={classes['trailers-menu']}>
           <img
             className={classes['movie-poster']}
             src={poster}
             alt='movie-poster'
           />
           <TrailerModal trailers={trailers} />
+          <PostersModal />
         </div>
 
         <div className={classes['movie-description']}>
@@ -30,7 +30,7 @@ const MovieInfo = ({ poster, movieInfo, trailers }) => {
           })}
         </div>
       </Template>
-    </div>
+    </section>
   )
 }
 

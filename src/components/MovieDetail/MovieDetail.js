@@ -109,7 +109,6 @@ export const MovieDetail = () => {
         movieTitle={info.title}
         ranking={info.vote_average}
       />
-      {/* <Modal /> */}
       <MovieInfo poster={poster} movieInfo={movieInfo} trailers={trailer} />
       <Comments comms={comments} />
     </div>

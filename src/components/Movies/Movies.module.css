@@ -19,24 +19,6 @@
   justify-content: center;
 }
 
-/* @media (max-width: 1000px) {
-  .movies-section {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1300px) and (min-width: 1001px) {
-  .movies-section {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1700px) and (min-width: 1301px) {
-  .movies-section {
-    width: 60%;
-  }
-} */
-
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -59,7 +41,7 @@
   right: 185px;
 }
 
-/* @media (min-width: 1800px) {
+@media (min-width: 1800px) {
   .movies-menu {
     grid-template-columns: repeat(5, 180px);
   }
@@ -81,4 +63,4 @@
   .movies-menu {
     grid-template-columns: repeat(2, 180px);
   }
-} */
+}

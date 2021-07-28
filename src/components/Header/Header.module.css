@@ -1,7 +1,6 @@
 .header {
   width: 100%;
   position: fixed;
-  /* padding: 10px 0px; */
   top: 0;
   left: 0;
   background: transparent;
@@ -14,24 +13,6 @@
   justify-content: space-between;
   margin: 0 auto;
   width: 50%;
-}
-
-@media (max-width: 1000px) {
-  .header-bar {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1300px) and (min-width: 1001px) {
-  .header-bar {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1700px) and (min-width: 1301px) {
-  .header-bar {
-    width: 60%;
-  }
 }
 
 @keyframes moveInLeft {

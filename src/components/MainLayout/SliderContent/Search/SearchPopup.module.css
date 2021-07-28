@@ -2,7 +2,6 @@
   position: absolute;
   z-index: 10000;
   top: 102px;
-  width: 50%;
 }
 
 .movie-posters {
@@ -12,24 +11,6 @@
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 5px;
-}
-
-@media (max-width: 1000px) {
-  .search-popup {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1300px) and (min-width: 1001px) {
-  .search-popup {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1700px) and (min-width: 1301px) {
-  .search-popup {
-    width: 60%;
-  }
 }
 
 .adv-poster {

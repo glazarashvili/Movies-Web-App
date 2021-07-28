@@ -9,25 +9,6 @@
 .movie-info {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-}
-
-@media (max-width: 1000px) {
-  .movie-info {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1300px) and (min-width: 1001px) {
-  .movie-info {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1700px) and (min-width: 1301px) {
-  .movie-info {
-    width: 60%;
-  }
 }
 
 .movie-poster {

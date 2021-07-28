@@ -9,6 +9,8 @@ import MovieSvg from '../SVG/MovieSvg'
 import CinemaSvg from '../SVG/CinemaSvg'
 import TvShowsSvg from '../SVG/TvShowsSvg'
 
+import Template from '../../ui/Template'
+
 const Header = () => {
   const [offset, setOffset] = React.useState(0)
 
@@ -36,7 +38,7 @@ const Header = () => {
         background: bgColor,
         transition: 'background 0.3s linear',
       }}>
-      <div className={classes['header-bar']}>
+      <Template className={classes['header-bar']}>
         <Link to='/'>
           <h1 className={`${classes.heading} ${fontColor}`}>MovieDB</h1>
         </Link>
@@ -66,7 +68,7 @@ const Header = () => {
             </div>
           </NavLink>
         </nav>
-      </div>
+      </Template>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Comment from './Comment'
 
-import Wrapper from '../../../ui/Wrapper'
+import Template from '../../../ui/Template'
 import classes from './Comments.module.css'
 import CommentsFilter from './CommentsFilter'
 
@@ -9,7 +9,7 @@ import { posterUrl, defaultIcon } from '../../../service/index'
 
 const Comments = ({ comms }) => {
   return (
-    <Wrapper>
+    <Template className={classes['comments-menu']}>
       {comms.length ? (
         <section>
           <div className={classes['comments-header']}>
@@ -36,9 +36,11 @@ const Comments = ({ comms }) => {
           })}
         </section>
       ) : (
-        <div className={classes['not-loaded']}>No Comments to load...</div>
+        <section className={classes['not-loaded']}>
+          No Comments to load...
+        </section>
       )}
-    </Wrapper>
+    </Template>
   )
 }
 

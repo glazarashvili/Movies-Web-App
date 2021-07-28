@@ -1,9 +1,11 @@
 import React from 'react'
+import Template from '../../../../ui/Template'
 
 import classes from './SearchInput.module.css'
 
 const SearchInput = ({ onFocus, zIndex, movieValue, onChange }) => {
   return (
+    // <Template>
     <input
       type='search'
       onFocus={onFocus}
@@ -13,6 +15,7 @@ const SearchInput = ({ onFocus, zIndex, movieValue, onChange }) => {
       style={{ zIndex: zIndex }}
       className={classes['search-input']}
     />
+    // </Template>
   )
 }
 

@@ -2,10 +2,12 @@ import React from 'react'
 
 import classes from './MovieInfo.module.css'
 
+import Template from '../../../ui/Template'
+
 const MovieInfo = ({ poster, movieInfo }) => {
   return (
     <div className={classes['movie-item']}>
-      <div className={classes['movie-info']}>
+      <Template className={classes['movie-info']}>
         <img
           className={classes['movie-poster']}
           src={poster}
@@ -20,7 +22,7 @@ const MovieInfo = ({ poster, movieInfo }) => {
             )
           })}
         </div>
-      </div>
+      </Template>
     </div>
   )
 }

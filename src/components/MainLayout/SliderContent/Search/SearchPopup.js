@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import Template from '../../../../ui/Template'
+
 import classes from './SearchPopup.module.css'
 
 import {
@@ -19,7 +21,7 @@ const SearchPopup = ({
 
   return (
     <React.Fragment>
-      <div className={`${classes['search-popup']} ${animationClass}`}>
+      <Template className={`${classes['search-popup']} ${animationClass}`}>
         {searchedMovies.length ? (
           <div className={classes['movie-posters']}>
             {searchedMovies.map(elem => {
@@ -47,7 +49,7 @@ const SearchPopup = ({
             />
           </div>
         )}
-      </div>
+      </Template>
       <div
         onClick={popupShown}
         className={`${className} ${animationClass}`}></div>

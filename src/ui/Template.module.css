@@ -1,27 +1,21 @@
-.movie-menu {
-  margin-top: 40px;
-}
-
-.div {
+.template-container {
   width: 50%;
-  display: flex;
-  margin: 0 auto;
 }
 
-/* @media (max-width: 1000px) {
-  .div {
+@media (max-width: 1000px) {
+  .template-container {
     width: 80%;
   }
 }
 
 @media (max-width: 1300px) and (min-width: 1001px) {
-  .div {
+  .template-container {
     width: 70%;
   }
 }
 
 @media (max-width: 1700px) and (min-width: 1301px) {
-  .div {
+  .template-container {
     width: 60%;
   }
-} */
+}

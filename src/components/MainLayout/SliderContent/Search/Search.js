@@ -5,6 +5,8 @@ import SearchPopup from './SearchPopup'
 import SearchInput from './SearchInput'
 import SearchIcon from '../../../SVG/SearchIcon'
 
+import Template from '../../../../ui/Template'
+
 import { url, apiKey } from '../../../../service/index'
 import { useDelayUnmount } from '../../../../hooks/useDelayUnmount'
 
@@ -37,7 +39,7 @@ const Search = () => {
   }, [movieValue])
 
   return (
-    <div className={classes['search-bar']}>
+    <Template className={classes['search-bar']}>
       <SearchInput
         zIndex={isMounted ? 2000 : 0}
         onFocus={() => setIsMounted(true)}
@@ -61,7 +63,7 @@ const Search = () => {
           }}
         />
       )}
-    </div>
+    </Template>
   )
 }
 

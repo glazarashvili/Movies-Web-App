@@ -11,26 +11,7 @@
   display: flex;
   align-items: center;
   min-height: 70px;
-  width: 50%;
   justify-content: space-between;
-}
-
-@media (max-width: 1000px) {
-  .slider-text-content {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1300px) and (min-width: 1001px) {
-  .slider-text-content {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1700px) and (min-width: 1301px) {
-  .slider-text-content {
-    width: 60%;
-  }
 }
 
 .movie-title {

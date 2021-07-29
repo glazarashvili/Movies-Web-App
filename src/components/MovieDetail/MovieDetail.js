@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import Comments from './Comments/Comments'
 import MovieCard from './MovieInfo/MovieCard'
 import MovieInfo from './MovieInfo/MovieInfo'
+import SimilarMovies from './SimilarMovies/SimilarMovies'
 
 import classes from './MovieDetail.module.css'
 
@@ -24,6 +25,7 @@ export const MovieDetail = () => {
   const [comments, setComments] = React.useState([])
   const [backdrop, setBackdrop] = React.useState('')
   const [trailer, setTrailer] = React.useState([])
+  const [similarMovies, setSimilarMovies] = React.useState([])
 
   React.useEffect(() => {
     axios
@@ -50,6 +52,12 @@ export const MovieDetail = () => {
       })
 
     axios
+      .get(`${url}/movie/${params.movieId}/videos?api_key=${apiKey}`)
+      .then(response => {
+        setTrailer(response.data.results)
+      })
+
+    axios
       .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'images')
@@ -68,14 +76,7 @@ export const MovieDetail = () => {
       .then(response => {
         console.log(response, 'similar')
         // aq wamovigebt msgavs filmebs
-      })
-
-    axios
-      .get(`${url}/movie/${params.movieId}/videos?api_key=${apiKey}`)
-      .then(response => {
-        console.log(response, 'videos')
-        setTrailer(response.data.results)
-        // aq wamovigebt filmis trailers, msaxiobebs da a.sh.
+        setSimilarMovies(response.data.results)
       })
   }, [params.movieId])
 
@@ -126,6 +127,7 @@ export const MovieDetail = () => {
         ranking={info.vote_average}
       />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
+      <SimilarMovies similarMovies={similarMovies} />
       <Comments comms={comments} />
     </div>
   )

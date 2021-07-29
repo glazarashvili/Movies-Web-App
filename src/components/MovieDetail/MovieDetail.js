@@ -8,7 +8,13 @@ import MovieInfo from './MovieInfo/MovieInfo'
 
 import classes from './MovieDetail.module.css'
 
-import { url, apiKey, posterUrl } from '../../service/index'
+import {
+  url,
+  apiKey,
+  posterUrl,
+  defaultPoster,
+  defaultBackground,
+} from '../../service/index'
 
 export const MovieDetail = () => {
   const params = useParams()
@@ -24,8 +30,17 @@ export const MovieDetail = () => {
       .get(`${url}/movie/${params.movieId}?api_key=${apiKey}`)
       .then(response => {
         setInfo(response.data)
-        setPoster(posterUrl + response.data.poster_path)
-        setBackdrop(posterUrl + response.data.backdrop_path)
+        setPoster(
+          response.data.poster_path
+            ? posterUrl + response.data.poster_path
+            : defaultPoster
+        )
+
+        setBackdrop(
+          response.data.backdrop_path
+            ? posterUrl + response.data.backdrop_path
+            : defaultBackground
+        )
       })
 
     axios

@@ -3,12 +3,14 @@ import axios from 'axios'
 export const url = 'https://api.themoviedb.org/3'
 export const apiKey = 'abcb68572e6980c3ad6d0e28dc35b6ce'
 export const posterUrl = 'https://image.tmdb.org/t/p/original'
+export const defaultBackground =
+  'https://images6.alphacoders.com/808/thumb-1920-808361.jpg'
 export const popupPoster =
   'https://bmscontent1.adjarabet.com/9062/Untitled-13.jpg'
 export const defaultIcon =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_HcS2JpDEqN5_Z6nMyHZ3PlYT-1FlQpiU2W6Vby4yMcw3ZjbkAi4U3zPJ1Ubb_6ygWuE&usqp=CAU'
 export const defaultPoster =
-  'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-21a1c803fe4ff4b858de24f5c91ec57f_screen.jpg?ts=1574144362'
+  'https://i.pinimg.com/originals/a9/05/77/a9057783638eb7ff119b385af4687529.jpg'
 
 export const fetchOnGoingMovies = async () => {
   const { data } = await axios({

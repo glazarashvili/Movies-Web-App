@@ -2,9 +2,9 @@ import React from 'react'
 
 import classes from './Button.module.css'
 
-const Button = ({ title, onBtnClick }) => {
+const Button = ({ title, onBtnClick, disabled }) => {
   return (
-    <button onClick={onBtnClick} className={classes.button}>
+    <button disabled={disabled} onClick={onBtnClick} className={classes.button}>
       {title}
     </button>
   )

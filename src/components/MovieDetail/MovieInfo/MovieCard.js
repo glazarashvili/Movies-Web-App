@@ -18,7 +18,11 @@ const MovieCard = ({ backdrop, movieTitle, trailers }) => {
       <Template className={classes['movie-content']}>
         <h1 className={classes['movie-title']}>{movieTitle}</h1>
         <div className={classes['movie-ranking']}>
-          <Button title='watch trailer' onBtnClick={() => showModal(true)} />
+          <Button
+            disabled={trailers.length ? false : true}
+            title='watch trailer'
+            onBtnClick={() => showModal(true)}
+          />
           {modal && <VideoModal cancelClick={closeModal} trailers={trailers} />}
           {modal && <Backdrop backdropClick={closeModal} />}
         </div>

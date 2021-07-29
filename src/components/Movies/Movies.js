@@ -4,7 +4,7 @@ import MovieItem from './Movie/MovieItem'
 import { defaultPoster } from '../../service/index'
 
 import classes from './Movies.module.css'
-import Loading from '../../ui/Loading'
+import Loading from '../../UI/Loading'
 
 const Movies = ({ func, quantity }) => {
   const [movies, setMovies] = React.useState([])

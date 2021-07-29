@@ -2,7 +2,7 @@ import React from 'react'
 
 import Search from './Search/Search'
 
-import Template from '../../../ui/Template'
+import Template from '../../../UI/Template'
 
 import classes from './SliderContent.module.css'
 

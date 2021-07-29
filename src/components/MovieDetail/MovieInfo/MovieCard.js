@@ -2,9 +2,9 @@ import React from 'react'
 
 import classes from './MovieCard.module.css'
 
-import Button from '../../../ui/Button'
-import Backdrop from '../../../ui/Backdrop'
-import Template from '../../../ui/Template'
+import Button from '../../../UI/Button'
+import Backdrop from '../../../UI/Backdrop'
+import Template from '../../../UI/Template'
 import VideoModal from './Modals/VideoModal'
 
 const MovieCard = ({ backdrop, movieTitle, trailers }) => {

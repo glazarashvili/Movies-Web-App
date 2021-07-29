@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './MovieInfo.module.css'
 
-import Template from '../../../ui/Template'
+import Template from '../../../UI/Template'
 
 const MovieInfo = ({ poster, movieInfo }) => {
   return (

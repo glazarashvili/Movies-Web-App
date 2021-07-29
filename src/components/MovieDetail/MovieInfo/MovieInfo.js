@@ -3,8 +3,6 @@ import React from 'react'
 import classes from './MovieInfo.module.css'
 
 import Template from '../../../ui/Template'
-import PostersModal from './Modals/PostersModal'
-import TrailerModal from './Modals/TrailerModal'
 
 const MovieInfo = ({ poster, movieInfo }) => {
   return (

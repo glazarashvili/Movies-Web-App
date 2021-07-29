@@ -1,7 +1,7 @@
 import React from 'react'
 import Comment from './Comment'
 
-import Template from '../../../ui/Template'
+import Template from '../../../UI/Template'
 import classes from './Comments.module.css'
 import CommentsFilter from './CommentsFilter'
 

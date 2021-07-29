@@ -5,10 +5,17 @@ import { useParams } from 'react-router-dom'
 import Comments from './Comments/Comments'
 import MovieCard from './MovieInfo/MovieCard'
 import MovieInfo from './MovieInfo/MovieInfo'
+import SimilarMovies from './SimilarMovies/SimilarMovies'
 
 import classes from './MovieDetail.module.css'
 
-import { url, apiKey, posterUrl } from '../../service/index'
+import {
+  url,
+  apiKey,
+  posterUrl,
+  defaultPoster,
+  defaultBackground,
+} from '../../service/index'
 
 export const MovieDetail = () => {
   const params = useParams()
@@ -18,14 +25,24 @@ export const MovieDetail = () => {
   const [comments, setComments] = React.useState([])
   const [backdrop, setBackdrop] = React.useState('')
   const [trailer, setTrailer] = React.useState([])
+  const [similarMovies, setSimilarMovies] = React.useState([])
 
   React.useEffect(() => {
     axios
       .get(`${url}/movie/${params.movieId}?api_key=${apiKey}`)
       .then(response => {
         setInfo(response.data)
-        setPoster(posterUrl + response.data.poster_path)
-        setBackdrop(posterUrl + response.data.backdrop_path)
+        setPoster(
+          response.data.poster_path
+            ? posterUrl + response.data.poster_path
+            : defaultPoster
+        )
+
+        setBackdrop(
+          response.data.backdrop_path
+            ? posterUrl + response.data.backdrop_path
+            : defaultBackground
+        )
       })
 
     axios
@@ -35,32 +52,28 @@ export const MovieDetail = () => {
       })
 
     axios
+      .get(`${url}/movie/${params.movieId}/videos?api_key=${apiKey}`)
+      .then(response => {
+        setTrailer(response.data.results)
+      })
+
+    axios
       .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'images')
-        // aq wamovigebt filmis posterebs
       })
 
     axios
       .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'cast')
-        // aq wamovigebt filmis casts, msaxiobebs da a.sh.
       })
 
     axios
       .get(`${url}/movie/${params.movieId}/similar?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'similar')
-        // aq wamovigebt msgavs filmebs
-      })
-
-    axios
-      .get(`${url}/movie/${params.movieId}/videos?api_key=${apiKey}`)
-      .then(response => {
-        console.log(response, 'videos')
-        setTrailer(response.data.results)
-        // aq wamovigebt filmis trailers, msaxiobebs da a.sh.
+        setSimilarMovies(response.data.results)
       })
   }, [params.movieId])
 
@@ -111,6 +124,7 @@ export const MovieDetail = () => {
         ranking={info.vote_average}
       />
       <MovieInfo poster={poster} movieInfo={movieInfo} />
+      <SimilarMovies similarMovies={similarMovies} />
       <Comments comms={comments} />
     </div>
   )

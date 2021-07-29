@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Template from '../../../../ui/Template'
+import Template from '../../../../UI/Template'
 
 import classes from './SearchPopup.module.css'
 

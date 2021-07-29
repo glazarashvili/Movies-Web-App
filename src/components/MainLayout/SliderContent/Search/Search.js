@@ -5,7 +5,7 @@ import SearchPopup from './SearchPopup'
 import SearchInput from './SearchInput'
 import SearchIcon from '../../../SVG/SearchIcon'
 
-import Template from '../../../../ui/Template'
+import Template from '../../../../UI/Template'
 
 import { url, apiKey } from '../../../../service/index'
 import { useDelayUnmount } from '../../../../hooks/useDelayUnmount'

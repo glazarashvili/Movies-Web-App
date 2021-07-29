@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Modal from '../../../../ui/Modal'
+import Modal from '../../../../UI/Modal'
 
 import classes from './VideoModal.module.css'
 

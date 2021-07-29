@@ -3,10 +3,8 @@ import React from 'react'
 import classes from './MovieInfo.module.css'
 
 import Template from '../../../ui/Template'
-import PostersModal from './Modals/PostersModal'
-import TrailerModal from './Modals/TrailerModal'
 
-const MovieInfo = ({ poster, movieInfo, trailers }) => {
+const MovieInfo = ({ poster, movieInfo }) => {
   return (
     <section className={classes['movie-item']}>
       <Template className={classes['movie-info']}>
@@ -16,10 +14,7 @@ const MovieInfo = ({ poster, movieInfo, trailers }) => {
             src={poster}
             alt='movie-poster'
           />
-          <TrailerModal trailers={trailers} />
-          <PostersModal />
         </div>
-
         <div className={classes['movie-description']}>
           {movieInfo.map(movie => {
             return (

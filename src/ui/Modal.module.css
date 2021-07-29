@@ -1,0 +1,13 @@
+.modal-container {
+  background: rgb(204, 200, 200);
+  color: black;
+  width: 800px;
+  height: 580px;
+  position: fixed;
+  z-index: 1001;
+  top: calc(50% - 290px);
+  left: calc(50% - 400px);
+  border-radius: 5px;
+  padding: 20px;
+  background: #fff;
+}

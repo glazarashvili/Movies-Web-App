@@ -1,26 +1,9 @@
-import React, { useState } from 'react'
-import { Modal as Dialog } from 'antd'
+import React from 'react'
 
-import ContainedButton from './Button'
+import classes from './Modal.module.css'
 
-const Modal = ({ children, modalFooter, modalTitle, modalWidth, title }) => {
-  const [visible, setVisible] = useState(false)
-  return (
-    <React.Fragment>
-      <ContainedButton
-        title={title}
-        openModal={() => setVisible(true)}></ContainedButton>
-      <Dialog
-        centered
-        footer={modalFooter}
-        title={modalTitle}
-        visible={visible}
-        onCancel={() => setVisible(false)}
-        width={modalWidth}>
-        <div>{children}</div>
-      </Dialog>
-    </React.Fragment>
-  )
+const Modal = ({ children }) => {
+  return <div className={classes['modal-container']}>{children}</div>
 }
 
 export default Modal

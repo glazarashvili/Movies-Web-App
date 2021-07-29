@@ -105,11 +105,12 @@ export const MovieDetail = () => {
   return (
     <div className={classes['detail-menu']}>
       <MovieCard
+        trailers={trailer}
         backdrop={backdrop}
         movieTitle={info.title}
         ranking={info.vote_average}
       />
-      <MovieInfo poster={poster} movieInfo={movieInfo} trailers={trailer} />
+      <MovieInfo poster={poster} movieInfo={movieInfo} />
       <Comments comms={comments} />
     </div>
   )

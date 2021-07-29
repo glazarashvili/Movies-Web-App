@@ -2,9 +2,15 @@ import React from 'react'
 
 import classes from './MovieCard.module.css'
 
+import Button from '../../../ui/Button'
+import Backdrop from '../../../ui/Backdrop'
 import Template from '../../../ui/Template'
+import VideoModal from './Modals/VideoModal'
 
-const MovieCard = ({ backdrop, movieTitle, ranking }) => {
+const MovieCard = ({ backdrop, movieTitle, trailers }) => {
+  const [modal, showModal] = React.useState(false)
+  const closeModal = () => showModal(false)
+
   const background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${backdrop}) no-repeat center center/cover`
 
   return (
@@ -12,8 +18,9 @@ const MovieCard = ({ backdrop, movieTitle, ranking }) => {
       <Template className={classes['movie-content']}>
         <h1 className={classes['movie-title']}>{movieTitle}</h1>
         <div className={classes['movie-ranking']}>
-          <h1>IMDB</h1>
-          <p>{ranking}</p>
+          <Button title='watch trailer' onBtnClick={() => showModal(true)} />
+          {modal && <VideoModal cancelClick={closeModal} trailers={trailers} />}
+          {modal && <Backdrop backdropClick={closeModal} />}
         </div>
       </Template>
     </div>

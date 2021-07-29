@@ -46,13 +46,13 @@
 
 .title {
   font-size: 16px;
-  color: rgba(0, 135, 255, 1);
+  color: #2f83c6;
   max-width: 170px;
 }
 
 .language {
   font-size: 16px;
-  color: rgba(0, 135, 255, 1);
+  color: #2f83c6;
 }
 
 .popup p {
@@ -63,7 +63,7 @@
 }
 
 .popup span {
-  color: rgba(0, 135, 255, 1);
+  color: #2f83c6;
   margin-right: 3px;
   font-size: 14px;
 }

@@ -61,21 +61,18 @@ export const MovieDetail = () => {
       .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'images')
-        // aq wamovigebt filmis posterebs
       })
 
     axios
       .get(`${url}/movie/${params.movieId}/credits?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'cast')
-        // aq wamovigebt filmis casts, msaxiobebs da a.sh.
       })
 
     axios
       .get(`${url}/movie/${params.movieId}/similar?api_key=${apiKey}`)
       .then(response => {
         console.log(response, 'similar')
-        // aq wamovigebt msgavs filmebs
         setSimilarMovies(response.data.results)
       })
   }, [params.movieId])

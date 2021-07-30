@@ -17,8 +17,6 @@ const SearchPopup = ({
   animationClass,
   searchedMovies,
 }) => {
-  // const popupWidth = window.innerWidth / 2
-
   return (
     <React.Fragment>
       <Template className={`${classes['search-popup']} ${animationClass}`}>

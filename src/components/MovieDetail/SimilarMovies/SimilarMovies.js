@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Template from '../../../UI/Template'
 
-import { posterUrl } from '../../../service/index'
+import { defaultPoster, posterUrl } from '../../../service/index'
 
 import PropTypes from 'prop-types'
 import Tab from '@material-ui/core/Tab'
@@ -45,13 +46,18 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
     height: 300,
-    justifyContent: 'center',
     margin: '0 auto',
     marginBottom: '30px',
+    borderRadius: '5px',
+    boxShadow: 'rgba(0, 0, 0, 0.2) 0px 3px 8px',
+  },
+  image: {
+    marginTop: '20px',
+    width: '150px',
+    height: '225px',
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -84,13 +90,17 @@ const SimilarMovies = ({ similarMovies }) => {
       {similarMovies.map((movie, index) => {
         return (
           <TabPanel key={movie.id} value={value} index={index}>
-            <div>
+            <Link to={`${movie.id}`}>
               <img
-                src={posterUrl + movie.poster_path}
+                src={
+                  movie.poster_path
+                    ? posterUrl + movie.poster_path
+                    : defaultPoster
+                }
                 alt='similar-movie-img'
-                style={{ width: '150px', height: '225px' }}
+                className={classes.image}
               />
-            </div>
+            </Link>
           </TabPanel>
         )
       })}

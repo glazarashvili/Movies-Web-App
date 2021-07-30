@@ -16,12 +16,15 @@ const Search = () => {
   const [movieValue, setMovieValue] = React.useState('')
   const [isMounted, setIsMounted] = React.useState(false)
   const shouldRenderChild = useDelayUnmount(isMounted, 400)
+  // const [loading, setLoading] = React.useState(false)
   const [searchedMovies, setSearchedMovies] = React.useState([])
 
   React.useEffect(() => {
     const searchMovie = async () => {
       const identifier = setTimeout(() => {
-        if (movieValue) {
+        if (!movieValue) {
+          setSearchedMovies([])
+        } else if (movieValue) {
           axios
             .get(`${url}/search/movie?query=${movieValue}&api_key=${apiKey}`)
             .then(response => {
@@ -34,7 +37,6 @@ const Search = () => {
         clearInterval(identifier)
       }
     }
-
     searchMovie()
   }, [movieValue])
 
@@ -44,6 +46,7 @@ const Search = () => {
         zIndex={isMounted ? 2000 : 0}
         onFocus={() => setIsMounted(true)}
         movieValue={movieValue}
+        // onBlur={}
         onChange={e => setMovieValue(e.target.value)}
       />
       <SearchIcon

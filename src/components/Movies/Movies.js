@@ -3,8 +3,8 @@ import MovieItem from './Movie/MovieItem'
 
 import { defaultPoster } from '../../service/index'
 
-import classes from './Movies.module.css'
 import Loading from '../../UI/Loading'
+import classes from './Movies.module.css'
 
 const Movies = ({ func, quantity }) => {
   const [movies, setMovies] = React.useState([])
@@ -37,14 +37,14 @@ const Movies = ({ func, quantity }) => {
               <MovieItem
                 key={movie.id}
                 desc={movie.desc}
-                title={movie.title}
                 movieId={movie.id}
+                title={movie.title}
                 ranking={movie.ranking}
                 date={movie.release_date}
                 language={movie.language}
+                image={movie.image || defaultPoster}
                 leftPosition={classes['left-position']}
                 rightPosition={classes['right-position']}
-                image={movie.image || defaultPoster}
               />
             )
           })}

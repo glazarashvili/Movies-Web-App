@@ -18,17 +18,17 @@
 
 @media (max-width: 1200px) and (min-width: 900px) {
   .popup {
+    width: 330px;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 1200px) {
+  .popup {
     width: 350px;
   }
 }
 
-@media (max-width: 1290px) and (min-width: 1000px) {
-  .popup {
-    width: 380px;
-  }
-}
-
-@media (min-width: 1290px) {
+@media (min-width: 1301px) {
   .popup {
     width: 380px;
   }
@@ -84,7 +84,6 @@
 }
 
 .ranking span {
-  /* border: 1px solid rgba(0, 135, 255, 1); */
   padding: 5px;
   color: #000;
   background: yellow;

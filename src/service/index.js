@@ -26,7 +26,7 @@ export const fetchOnGoingMovies = async () => {
   const modifiedData = data.results.map(item => ({
     id: item.id,
     title: item.title,
-    image: posterUrl + item?.poster_path,
+    image: item.poster_path ? posterUrl + item.poster_path : defaultPoster,
     language: item.original_language,
     desc: item.overview,
     release_date: item.release_date.slice(0, 4),

@@ -1,8 +1,16 @@
 import React from 'react'
 
-import classes from './Popup.module.css'
+import classes from './MovieItemPopup.module.css'
 
-const Popup = ({ title, language, ranking, date, desc, hover, position }) => {
+const MovieItemPopup = ({
+  title,
+  language,
+  ranking,
+  date,
+  desc,
+  hover,
+  position,
+}) => {
   return (
     <div className={`${classes.popup} ${hover} ${position}`}>
       <section>
@@ -27,4 +35,4 @@ const Popup = ({ title, language, ranking, date, desc, hover, position }) => {
   )
 }
 
-export default Popup
+export default MovieItemPopup

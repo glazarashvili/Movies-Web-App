@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Popup from './Popup'
-
-import classes from './MovieItem.module.css'
-import PlayerSvg from '../../SVG/PlayerSvg'
 import { Link } from 'react-router-dom'
+
+import PlayerSvg from '../../SVG/PlayerSvg'
+import MovieItemPopup from './MovieItemPopup'
+import classes from './MovieItem.module.css'
 
 const MovieItem = ({
   date,
@@ -23,7 +23,7 @@ const MovieItem = ({
   let offset =
     refContainer?.current?.offsetLeft - 500 < 0
       ? leftPosition
-      : refContainer?.current?.offsetLeft + 700 > window.innerWidth
+      : refContainer?.current?.offsetLeft + 1300 > window.innerWidth
       ? rightPosition
       : refContainer?.current?.offsetLeft - 1300 < 0
       ? leftPosition
@@ -35,13 +35,13 @@ const MovieItem = ({
 
   return (
     <Link to={`/movies/${movieId}`}>
-      <div ref={refContainer}>
+      <section ref={refContainer}>
         <div className={classes['movie-item']}>
           <img className={classes.poster} src={image} alt='poster' />
           <div className={classes.background}>
             <PlayerSvg className={classes['player-icon']} />
           </div>
-          <Popup
+          <MovieItemPopup
             desc={desc}
             date={date}
             title={title}
@@ -51,7 +51,7 @@ const MovieItem = ({
             hover={classes.popup}
           />
         </div>
-      </div>
+      </section>
     </Link>
   )
 }
